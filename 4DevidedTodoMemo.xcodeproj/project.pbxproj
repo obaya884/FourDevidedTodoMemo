@@ -15,6 +15,7 @@
 		669C92E622759BE8009DC657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669C92E422759BE8009DC657 /* LaunchScreen.storyboard */; };
 		669C92F122759BE8009DC657 /* _DevidedTodoMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C92F022759BE8009DC657 /* _DevidedTodoMemoTests.swift */; };
 		669C92FC22759BE8009DC657 /* _DevidedTodoMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C92FB22759BE8009DC657 /* _DevidedTodoMemoUITests.swift */; };
+		669C930C2275A3DF009DC657 /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C930B2275A3DF009DC657 /* IBDesignableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		669C92F722759BE8009DC657 /* 4DevidedTodoMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4DevidedTodoMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		669C92FB22759BE8009DC657 /* _DevidedTodoMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DevidedTodoMemoUITests.swift; sourceTree = "<group>"; };
 		669C92FD22759BE8009DC657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669C930B2275A3DF009DC657 /* IBDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		669C92D722759BE7009DC657 /* 4DevidedTodoMemo */ = {
 			isa = PBXGroup;
 			children = (
+				669C930B2275A3DF009DC657 /* IBDesignableButton.swift */,
 				669C92D822759BE7009DC657 /* AppDelegate.swift */,
 				669C92DA22759BE7009DC657 /* ViewController.swift */,
 				669C92DC22759BE7009DC657 /* Main.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669C930C2275A3DF009DC657 /* IBDesignableButton.swift in Sources */,
 				669C92E122759BE7009DC657 /* _DevidedTodoMemo.xcdatamodeld in Sources */,
 				669C92DB22759BE7009DC657 /* ViewController.swift in Sources */,
 				669C92D922759BE7009DC657 /* AppDelegate.swift in Sources */,
