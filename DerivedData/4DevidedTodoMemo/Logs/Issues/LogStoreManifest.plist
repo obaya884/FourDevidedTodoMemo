@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>2BBC2E6A-4C04-449B-8FDC-D46F8E3888A8</key>
+		<key>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,22 +15,48 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>2BBC2E6A-4C04-449B-8FDC-D46F8E3888A8.xcactivitylog</string>
+			<string>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
+			<key>timeStartedRecording</key>
+			<real>578457541.28661299</real>
+			<key>timeStoppedRecording</key>
+			<real>578457543.28680003</real>
+			<key>title</key>
+			<string>Build target 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35</string>
+		</dict>
+		<key>7060B960-6100-4EB0-8382-C2FE87533D93</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>7060B960-6100-4EB0-8382-C2FE87533D93.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
 				<string>S</string>
 			</dict>
 			<key>signature</key>
-			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
+			<string>Pods-4DevidedTodoMemo-cakzjcvvcqpkdobliktumoivnrof</string>
 			<key>timeStartedRecording</key>
-			<real>578191450.130566</real>
+			<real>578427362.93626297</real>
 			<key>timeStoppedRecording</key>
-			<real>578191452.79850996</real>
+			<real>578427362.93953001</real>
 			<key>title</key>
-			<string>Build target 4DevidedTodoMemo</string>
+			<string>Build target Pods-4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
-			<string>2BBC2E6A-4C04-449B-8FDC-D46F8E3888A8</string>
+			<string>7060B960-6100-4EB0-8382-C2FE87533D93</string>
 		</dict>
 		<key>B556C6B5-00D8-4726-AE77-49587D94B884</key>
 		<dict>
@@ -83,6 +109,32 @@
 			<string>Build target 4DevidedTodoMemoTests</string>
 			<key>uniqueIdentifier</key>
 			<string>BA45AE05-54CB-4A4E-9AE0-182DA77CC340</string>
+		</dict>
+		<key>D519B425-59FC-4DA8-BF32-3412B76EC7D6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>D519B425-59FC-4DA8-BF32-3412B76EC7D6.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>LTHRadioButton-cakzjcvvcqpkdobliktumoivnrof</string>
+			<key>timeStartedRecording</key>
+			<real>578427362.92356098</real>
+			<key>timeStoppedRecording</key>
+			<real>578427362.93750298</real>
+			<key>title</key>
+			<string>Build target LTHRadioButton</string>
+			<key>uniqueIdentifier</key>
+			<string>D519B425-59FC-4DA8-BF32-3412B76EC7D6</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
