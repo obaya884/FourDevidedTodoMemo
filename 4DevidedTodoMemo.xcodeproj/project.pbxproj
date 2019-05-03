@@ -21,6 +21,8 @@
 		669C931022768E3A009DC657 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669C930E22768E3A009DC657 /* CustomTableViewCell.xib */; };
 		66C67745227ABF4900ECF860 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C67743227ABF4900ECF860 /* ModalViewController.swift */; };
 		66C67746227ABF4900ECF860 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C67744227ABF4900ECF860 /* ModalViewController.xib */; };
+		66C67748227BFA8D00ECF860 /* EditingStyleChangeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C67747227BFA8D00ECF860 /* EditingStyleChangeTextField.swift */; };
+		66C6774A227C161800ECF860 /* TouchEventChainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C67749227C161800ECF860 /* TouchEventChainTableView.swift */; };
 		EF8DE85834370E6AE693BDE2 /* Pods_4DevidedTodoMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E595038D86230158B3F2660 /* Pods_4DevidedTodoMemo.framework */; };
 		F82826C54DDAE65A06B1C7D3 /* Pods_4DevidedTodoMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF8159797C44111FA74A5C1 /* Pods_4DevidedTodoMemoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		669C930E22768E3A009DC657 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		66C67743227ABF4900ECF860 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		66C67744227ABF4900ECF860 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		66C67747227BFA8D00ECF860 /* EditingStyleChangeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingStyleChangeTextField.swift; sourceTree = "<group>"; };
+		66C67749227C161800ECF860 /* TouchEventChainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEventChainTableView.swift; sourceTree = "<group>"; };
 		7E595038D86230158B3F2660 /* Pods_4DevidedTodoMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4DevidedTodoMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E0048823DCBBF31088A41C /* Pods-4DevidedTodoMemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4DevidedTodoMemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4DevidedTodoMemoUITests/Pods-4DevidedTodoMemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9ABA9818B2754302EF72BCD1 /* Pods_4DevidedTodoMemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4DevidedTodoMemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,8 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				669C930B2275A3DF009DC657 /* IBDesignableButton.swift */,
+				66C67747227BFA8D00ECF860 /* EditingStyleChangeTextField.swift */,
 				669C92D822759BE7009DC657 /* AppDelegate.swift */,
 				669C92DA22759BE7009DC657 /* ViewController.swift */,
+				66C67749227C161800ECF860 /* TouchEventChainTableView.swift */,
 				66C67743227ABF4900ECF860 /* ModalViewController.swift */,
 				66C67744227ABF4900ECF860 /* ModalViewController.xib */,
 				669C930D22768E3A009DC657 /* CustomTableViewCell.swift */,
@@ -403,6 +409,8 @@
 				669C930F22768E3A009DC657 /* CustomTableViewCell.swift in Sources */,
 				669C92E122759BE7009DC657 /* _DevidedTodoMemo.xcdatamodeld in Sources */,
 				669C92DB22759BE7009DC657 /* ViewController.swift in Sources */,
+				66C6774A227C161800ECF860 /* TouchEventChainTableView.swift in Sources */,
+				66C67748227BFA8D00ECF860 /* EditingStyleChangeTextField.swift in Sources */,
 				669C92D922759BE7009DC657 /* AppDelegate.swift in Sources */,
 				66C67745227ABF4900ECF860 /* ModalViewController.swift in Sources */,
 			);

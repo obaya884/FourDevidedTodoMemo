@@ -15,10 +15,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK:- Initialization
     
     //アウトレット変数
-    @IBOutlet var topLeftSectionNameLabel: UILabel!
-    @IBOutlet var topRightSectionNameLabel: UILabel!
-    @IBOutlet var bottomLeftSectionNameLabel: UILabel!
-    @IBOutlet var bottomRightSectionNameLabel: UILabel!
+    @IBOutlet var topLeftSectionNameTextField: UITextField!
+    @IBOutlet var topRightSectionNameTextField: UITextField!
+    @IBOutlet var bottomLeftSectionNameTextField: UITextField!
+    @IBOutlet var bottomRightSectionNameTextField: UITextField!
     
     @IBOutlet var topLeftSectionTableView: UITableView!
     @IBOutlet var topRightSectionTableView: UITableView!
@@ -103,6 +103,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dataArrays.append(bottomRightSectionTestArray)
         
     }
+    
+    //画面外をタッチした時にキーボードをしまう
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if(topLeftSectionNameTextField.isFirstResponder
+//            || topRightSectionNameTextField.isFirstResponder
+//            || bottomLeftSectionNameTextField.isFirstResponder
+//            || bottomRightSectionNameTextField.isFirstResponder ){
+            //どれが反応しても閉じれるようにviewに対してendEditngする
+            print("touches began")
+            self.view.endEditing(true)
+//        UIApplication.shared.keyWindow?.endEditing(true)
+//        }
+    }
+    
     
     
     // MARK:- TableView
@@ -253,7 +267,7 @@ extension ViewController: AddButtonDelegate{
                 self.topRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                 self.topRightSectionTableView.endUpdates()
                 self.topRightSectionTableView.flashScrollIndicators()
-
+                
                 
             case 2:
                 self.bottomLeftSectionTestArray.insert(content, at: 0)

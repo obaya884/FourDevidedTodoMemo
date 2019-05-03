@@ -6,6 +6,38 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>01DD127B-D723-4559-A36E-B03F7C016B39</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>01DD127B-D723-4559-A36E-B03F7C016B39.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578555048.62146401</real>
+			<key>timeStoppedRecording</key>
+			<real>578555220.45172501</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>01DD127B-D723-4559-A36E-B03F7C016B39</string>
+		</dict>
 		<key>094D8417-755E-45F7-ACF2-C3FC1A6EDAAB</key>
 		<dict>
 			<key>className</key>
@@ -486,6 +518,70 @@
 			<key>uniqueIdentifier</key>
 			<string>19F8F217-C953-4FED-A5FF-BE34267839B9</string>
 		</dict>
+		<key>1CE4FE40-A9C0-4EA6-9A8C-73B867C565E4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1CE4FE40-A9C0-4EA6-9A8C-73B867C565E4.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554215.24445498</real>
+			<key>timeStoppedRecording</key>
+			<real>578554224.48066294</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>1CE4FE40-A9C0-4EA6-9A8C-73B867C565E4</string>
+		</dict>
+		<key>215A4002-89C7-4C15-8605-63E8C379A718</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>215A4002-89C7-4C15-8605-63E8C379A718.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578551898.76573205</real>
+			<key>timeStoppedRecording</key>
+			<real>578552211.62691104</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>215A4002-89C7-4C15-8605-63E8C379A718</string>
+		</dict>
 		<key>2226538C-1B49-4DA1-8850-7A7FEDDB3256</key>
 		<dict>
 			<key>className</key>
@@ -549,6 +645,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>2466CEFF-06A5-4985-A277-9BAAEC93F159</string>
+		</dict>
+		<key>25F125E2-73B4-4CC5-8079-F3DCF67CF119</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>25F125E2-73B4-4CC5-8079-F3DCF67CF119.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578553489.19690204</real>
+			<key>timeStoppedRecording</key>
+			<real>578553970.03618395</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>25F125E2-73B4-4CC5-8079-F3DCF67CF119</string>
 		</dict>
 		<key>2A6E9B09-2F39-4BAC-895C-32500C4C757B</key>
 		<dict>
@@ -678,6 +806,38 @@
 			<key>uniqueIdentifier</key>
 			<string>2C532EFE-3F92-478D-83E2-149FFCE652F5</string>
 		</dict>
+		<key>2C8EC20C-4260-4057-A0BC-B2613CA38068</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2C8EC20C-4260-4057-A0BC-B2613CA38068.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578556419.34666204</real>
+			<key>timeStoppedRecording</key>
+			<real>578556449.99103105</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>2C8EC20C-4260-4057-A0BC-B2613CA38068</string>
+		</dict>
 		<key>2E532BB1-C125-44EC-8FD1-5B4CDA65AC78</key>
 		<dict>
 			<key>className</key>
@@ -709,6 +869,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>2E532BB1-C125-44EC-8FD1-5B4CDA65AC78</string>
+		</dict>
+		<key>2F7C5864-FDDB-4CE0-9B22-57E34B59A413</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2F7C5864-FDDB-4CE0-9B22-57E34B59A413.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554843.30172503</real>
+			<key>timeStoppedRecording</key>
+			<real>578555047.24891496</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>2F7C5864-FDDB-4CE0-9B22-57E34B59A413</string>
 		</dict>
 		<key>35320243-DC14-46DB-9B32-A9EB16126B87</key>
 		<dict>
@@ -1030,6 +1222,38 @@
 			<key>uniqueIdentifier</key>
 			<string>40DE30BE-2F9A-4A0B-9F81-2B09672E6C46</string>
 		</dict>
+		<key>419A08CF-545F-417B-8C86-B5699F339E31</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>419A08CF-545F-417B-8C86-B5699F339E31.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552366.55846703</real>
+			<key>timeStoppedRecording</key>
+			<real>578552553.82320297</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>419A08CF-545F-417B-8C86-B5699F339E31</string>
+		</dict>
 		<key>41F4E3E3-1437-4558-B5DA-40B9455CA1F8</key>
 		<dict>
 			<key>className</key>
@@ -1254,6 +1478,38 @@
 			<key>uniqueIdentifier</key>
 			<string>4AD9A326-1567-48D5-88D1-9D46D815824E</string>
 		</dict>
+		<key>4B82ECD8-B218-4AC4-BC23-25653D5523A5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4B82ECD8-B218-4AC4-BC23-25653D5523A5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578553039.67677402</real>
+			<key>timeStoppedRecording</key>
+			<real>578553277.095626</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>4B82ECD8-B218-4AC4-BC23-25653D5523A5</string>
+		</dict>
 		<key>4BC9F065-2EB1-4CA3-9601-56195CFB84BC</key>
 		<dict>
 			<key>className</key>
@@ -1382,6 +1638,38 @@
 			<key>uniqueIdentifier</key>
 			<string>4FA6309B-ECDF-43E4-A3EF-FF23EA621BA7</string>
 		</dict>
+		<key>5226B0F1-A952-4B0B-BED9-E3AF83FA7EF5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5226B0F1-A952-4B0B-BED9-E3AF83FA7EF5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578551649.75740397</real>
+			<key>timeStoppedRecording</key>
+			<real>578551670.38531005</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>5226B0F1-A952-4B0B-BED9-E3AF83FA7EF5</string>
+		</dict>
 		<key>54E90F33-645D-4895-AFF9-517CCFCFC332</key>
 		<dict>
 			<key>className</key>
@@ -1413,6 +1701,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>54E90F33-645D-4895-AFF9-517CCFCFC332</string>
+		</dict>
+		<key>558EDF56-E44B-4942-A360-F3E15DEF9529</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>558EDF56-E44B-4942-A360-F3E15DEF9529.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578556451.82823098</real>
+			<key>timeStoppedRecording</key>
+			<real>578556527.32030404</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>558EDF56-E44B-4942-A360-F3E15DEF9529</string>
 		</dict>
 		<key>572F3D6A-AD19-4A49-B210-08E2F2E0361A</key>
 		<dict>
@@ -1509,6 +1829,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>5A12A6B3-8437-40D6-A949-B99D41B01BAF</string>
+		</dict>
+		<key>5AC538C2-930C-4F68-8478-7AA68DD21471</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5AC538C2-930C-4F68-8478-7AA68DD21471.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552213.045591</real>
+			<key>timeStoppedRecording</key>
+			<real>578552358.82713103</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>5AC538C2-930C-4F68-8478-7AA68DD21471</string>
 		</dict>
 		<key>5B61E18B-99D1-4B0F-BCD4-FE7E4FFE3483</key>
 		<dict>
@@ -1798,6 +2150,38 @@
 			<key>uniqueIdentifier</key>
 			<string>67FCED48-A4D7-45D7-91DE-EB8DBF50383A</string>
 		</dict>
+		<key>695BCCF5-348A-4DB1-92C0-8D1B4E698808</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>695BCCF5-348A-4DB1-92C0-8D1B4E698808.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552999.49804497</real>
+			<key>timeStoppedRecording</key>
+			<real>578553038.36214006</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>695BCCF5-348A-4DB1-92C0-8D1B4E698808</string>
+		</dict>
 		<key>6F174072-008F-41DD-8EDF-DAB2C2A4CB67</key>
 		<dict>
 			<key>className</key>
@@ -1894,6 +2278,38 @@
 			<key>uniqueIdentifier</key>
 			<string>7345547B-4A97-42D0-9761-249A12348C45</string>
 		</dict>
+		<key>753A6B8C-9C5A-4CB5-966A-A2D884D81694</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>753A6B8C-9C5A-4CB5-966A-A2D884D81694.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554574.09753597</real>
+			<key>timeStoppedRecording</key>
+			<real>578554599.42646301</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>753A6B8C-9C5A-4CB5-966A-A2D884D81694</string>
+		</dict>
 		<key>75EEC1BE-D8D7-47BC-AE8B-AA7DC74137E0</key>
 		<dict>
 			<key>className</key>
@@ -1957,6 +2373,70 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>767C5899-3D09-4F2B-B944-1D4F4A6EC81E</string>
+		</dict>
+		<key>77ED0B26-495F-4B1A-A475-3FF8BDFA4351</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>77ED0B26-495F-4B1A-A475-3FF8BDFA4351.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552556.03193295</real>
+			<key>timeStoppedRecording</key>
+			<real>578552806.64758098</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>77ED0B26-495F-4B1A-A475-3FF8BDFA4351</string>
+		</dict>
+		<key>77FC1749-181D-48BC-B88C-089126ACBB5A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>77FC1749-181D-48BC-B88C-089126ACBB5A.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554369.18116701</real>
+			<key>timeStoppedRecording</key>
+			<real>578554425.09188402</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>77FC1749-181D-48BC-B88C-089126ACBB5A</string>
 		</dict>
 		<key>79074CDD-EB67-4B6D-A22F-09394719CB7E</key>
 		<dict>
@@ -2118,6 +2598,70 @@
 			<key>uniqueIdentifier</key>
 			<string>7FD00822-22E9-4A8C-A807-114CA42A8700</string>
 		</dict>
+		<key>80208D19-A9B9-4F80-893D-B0B0A4B8BB22</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>80208D19-A9B9-4F80-893D-B0B0A4B8BB22.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554490.81639099</real>
+			<key>timeStoppedRecording</key>
+			<real>578554520.09342003</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>80208D19-A9B9-4F80-893D-B0B0A4B8BB22</string>
+		</dict>
+		<key>813AF276-2FFD-4AE3-BA21-A39A12111000</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>813AF276-2FFD-4AE3-BA21-A39A12111000.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552853.23923898</real>
+			<key>timeStoppedRecording</key>
+			<real>578552897.69293594</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>813AF276-2FFD-4AE3-BA21-A39A12111000</string>
+		</dict>
 		<key>81BA3F6F-C6FF-4AA9-8EE1-B676A57B96D1</key>
 		<dict>
 			<key>className</key>
@@ -2181,6 +2725,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>82C28430-C34C-4136-918F-17BAB6175316</string>
+		</dict>
+		<key>835207AE-B076-4F7A-95A7-977163B6B3CF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>835207AE-B076-4F7A-95A7-977163B6B3CF.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578556554.867082</real>
+			<key>timeStoppedRecording</key>
+			<real>578556673.84890497</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>835207AE-B076-4F7A-95A7-977163B6B3CF</string>
 		</dict>
 		<key>88035B7F-90C1-401C-A142-AAFCD9B64EC1</key>
 		<dict>
@@ -2246,6 +2822,38 @@
 			<key>uniqueIdentifier</key>
 			<string>8AE005C0-AF7C-4EA8-8123-0FC7A344340D</string>
 		</dict>
+		<key>8BC95F20-B8CF-4F61-8E45-367D4E8F7290</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8BC95F20-B8CF-4F61-8E45-367D4E8F7290.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578555278.30466294</real>
+			<key>timeStoppedRecording</key>
+			<real>578555431.51322198</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>8BC95F20-B8CF-4F61-8E45-367D4E8F7290</string>
+		</dict>
 		<key>8CBB3913-7778-49C9-B049-BE9BCF82E3B3</key>
 		<dict>
 			<key>className</key>
@@ -2278,6 +2886,38 @@
 			<key>uniqueIdentifier</key>
 			<string>8CBB3913-7778-49C9-B049-BE9BCF82E3B3</string>
 		</dict>
+		<key>8D152886-BFC4-4F0E-9B2E-404FA4AD32FC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8D152886-BFC4-4F0E-9B2E-404FA4AD32FC.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578556673.94093394</real>
+			<key>timeStoppedRecording</key>
+			<real>578557680.56709397</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>8D152886-BFC4-4F0E-9B2E-404FA4AD32FC</string>
+		</dict>
 		<key>8FF3C479-080A-436B-9852-6A282E139DA6</key>
 		<dict>
 			<key>className</key>
@@ -2309,6 +2949,70 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>8FF3C479-080A-436B-9852-6A282E139DA6</string>
+		</dict>
+		<key>90456FBF-0090-46D8-B9A2-24112AC6DF5D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>90456FBF-0090-46D8-B9A2-24112AC6DF5D.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578556379.23223305</real>
+			<key>timeStoppedRecording</key>
+			<real>578556417.59158897</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>90456FBF-0090-46D8-B9A2-24112AC6DF5D</string>
+		</dict>
+		<key>93A177BF-AB54-4AE8-A73F-D7FD2D048579</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>93A177BF-AB54-4AE8-A73F-D7FD2D048579.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554178.95450902</real>
+			<key>timeStoppedRecording</key>
+			<real>578554213.74888003</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>93A177BF-AB54-4AE8-A73F-D7FD2D048579</string>
 		</dict>
 		<key>94F44505-C775-4416-8768-90D7323DECEF</key>
 		<dict>
@@ -2438,6 +3142,38 @@
 			<key>uniqueIdentifier</key>
 			<string>9A224E1F-0E70-40C3-BC98-45F02DF8951E</string>
 		</dict>
+		<key>9F976E18-140B-4983-AD37-8570FD0251B9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9F976E18-140B-4983-AD37-8570FD0251B9.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552808.01249397</real>
+			<key>timeStoppedRecording</key>
+			<real>578552823.21637404</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>9F976E18-140B-4983-AD37-8570FD0251B9</string>
+		</dict>
 		<key>A0BB28D4-FE6D-4C08-ABE6-3E93BB0B04A9</key>
 		<dict>
 			<key>className</key>
@@ -2501,6 +3237,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>A14DB617-9D4B-4C06-A2EB-4FBC6BF46057</string>
+		</dict>
+		<key>A1E8D3C8-E8E3-4E07-80BF-163914A53E1F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A1E8D3C8-E8E3-4E07-80BF-163914A53E1F.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578551671.02458203</real>
+			<key>timeStoppedRecording</key>
+			<real>578551896.91529703</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>A1E8D3C8-E8E3-4E07-80BF-163914A53E1F</string>
 		</dict>
 		<key>A37CD954-D2D8-40F0-9266-4E3D42C73758</key>
 		<dict>
@@ -2566,6 +3334,38 @@
 			<key>uniqueIdentifier</key>
 			<string>A3BEB1CE-F5C1-4E2D-BB78-BE6737EC0D4D</string>
 		</dict>
+		<key>A3E8214E-B031-42AE-8D59-16C96172D950</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A3E8214E-B031-42AE-8D59-16C96172D950.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554520.80854797</real>
+			<key>timeStoppedRecording</key>
+			<real>578554572.22742498</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>A3E8214E-B031-42AE-8D59-16C96172D950</string>
+		</dict>
 		<key>A5066A1B-5FB4-4087-8486-9FE8B3637FE8</key>
 		<dict>
 			<key>className</key>
@@ -2597,6 +3397,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>A5066A1B-5FB4-4087-8486-9FE8B3637FE8</string>
+		</dict>
+		<key>A550D8C1-A334-47D3-AEEB-61FADCA53A7A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A550D8C1-A334-47D3-AEEB-61FADCA53A7A.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578553376.56294894</real>
+			<key>timeStoppedRecording</key>
+			<real>578553487.13974702</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>A550D8C1-A334-47D3-AEEB-61FADCA53A7A</string>
 		</dict>
 		<key>A5F4E858-3D58-46EB-902E-64C3A7FE67CF</key>
 		<dict>
@@ -2693,6 +3525,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>A89E0118-30DD-4235-A957-06A323CAC7B9</string>
+		</dict>
+		<key>AFC9AE78-1AA5-43D1-A92E-F68973E666DD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AFC9AE78-1AA5-43D1-A92E-F68973E666DD.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552898.98272502</real>
+			<key>timeStoppedRecording</key>
+			<real>578552914.29529202</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>AFC9AE78-1AA5-43D1-A92E-F68973E666DD</string>
 		</dict>
 		<key>B03F75A9-E80F-4191-9102-5E4D85356431</key>
 		<dict>
@@ -2886,6 +3750,38 @@
 			<key>uniqueIdentifier</key>
 			<string>B8A88748-29FF-46E3-A99F-C8DDB2CF3D25</string>
 		</dict>
+		<key>B9267E5F-35A7-47F4-847D-FDA498881DD9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B9267E5F-35A7-47F4-847D-FDA498881DD9.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578555230.06135404</real>
+			<key>timeStoppedRecording</key>
+			<real>578555276.633641</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>B9267E5F-35A7-47F4-847D-FDA498881DD9</string>
+		</dict>
 		<key>BB07E4F6-0422-49B9-BEB8-75519FAC1208</key>
 		<dict>
 			<key>className</key>
@@ -2917,6 +3813,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>BB07E4F6-0422-49B9-BEB8-75519FAC1208</string>
+		</dict>
+		<key>BD905035-8ED5-4857-AD7D-47744DABB1CE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BD905035-8ED5-4857-AD7D-47744DABB1CE.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554142.01034498</real>
+			<key>timeStoppedRecording</key>
+			<real>578554177.67802</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>BD905035-8ED5-4857-AD7D-47744DABB1CE</string>
 		</dict>
 		<key>BDB1185A-82DD-41CE-9F33-3EFA981A0751</key>
 		<dict>
@@ -2982,6 +3910,38 @@
 			<key>uniqueIdentifier</key>
 			<string>BDC7B964-F90F-43C2-B886-D8E99D58F2A5</string>
 		</dict>
+		<key>C16DBD64-ECDC-4B17-8ADD-91BFAF8DF503</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C16DBD64-ECDC-4B17-8ADD-91BFAF8DF503.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578550152.63329899</real>
+			<key>timeStoppedRecording</key>
+			<real>578551646.79254699</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>C16DBD64-ECDC-4B17-8ADD-91BFAF8DF503</string>
+		</dict>
 		<key>C4225038-6EC0-418D-8D19-E8E6027E997F</key>
 		<dict>
 			<key>className</key>
@@ -3013,6 +3973,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>C4225038-6EC0-418D-8D19-E8E6027E997F</string>
+		</dict>
+		<key>C778825A-D451-46DB-A445-FB02CF653984</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C778825A-D451-46DB-A445-FB02CF653984.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554115.32528698</real>
+			<key>timeStoppedRecording</key>
+			<real>578554141.45845103</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>C778825A-D451-46DB-A445-FB02CF653984</string>
 		</dict>
 		<key>CA621C75-8AFA-4DDC-975F-A81B74881870</key>
 		<dict>
@@ -3109,6 +4101,70 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>D12AF0EA-37E3-4BAD-8A5E-03AD33E182E6</string>
+		</dict>
+		<key>D21F35A2-A696-4AFA-92D5-F620A8BCA60B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D21F35A2-A696-4AFA-92D5-F620A8BCA60B.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554426.56533206</real>
+			<key>timeStoppedRecording</key>
+			<real>578554489.84973395</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>D21F35A2-A696-4AFA-92D5-F620A8BCA60B</string>
+		</dict>
+		<key>D30990C8-2C21-4AB2-9FF8-084C1DF67D44</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D30990C8-2C21-4AB2-9FF8-084C1DF67D44.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578548962.38852096</real>
+			<key>timeStoppedRecording</key>
+			<real>578549979.55714202</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>D30990C8-2C21-4AB2-9FF8-084C1DF67D44</string>
 		</dict>
 		<key>D3A0B580-E87B-49F5-9AD7-9E3215140C0F</key>
 		<dict>
@@ -3302,6 +4358,38 @@
 			<key>uniqueIdentifier</key>
 			<string>DA2C32A5-AFD3-4EC2-A2EC-F7A58BD474C9</string>
 		</dict>
+		<key>DA5DA56B-042E-4637-AEF7-8357948F0780</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DA5DA56B-042E-4637-AEF7-8357948F0780.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552926.871225</real>
+			<key>timeStoppedRecording</key>
+			<real>578552998.18587697</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>DA5DA56B-042E-4637-AEF7-8357948F0780</string>
+		</dict>
 		<key>DB536ED9-A22B-4554-B3E8-CC092073FC62</key>
 		<dict>
 			<key>className</key>
@@ -3333,6 +4421,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>DB536ED9-A22B-4554-B3E8-CC092073FC62</string>
+		</dict>
+		<key>DDB69EE6-394B-40AC-AA66-5D7D6D212252</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DDB69EE6-394B-40AC-AA66-5D7D6D212252.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578549982.49865603</real>
+			<key>timeStoppedRecording</key>
+			<real>578550083.51348901</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>DDB69EE6-394B-40AC-AA66-5D7D6D212252</string>
 		</dict>
 		<key>DE31AB86-F696-4362-9BA4-E2B0E8C88827</key>
 		<dict>
@@ -3429,6 +4549,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>E63290D0-B5D3-412C-A5AA-F1F5E27A00E7</string>
+		</dict>
+		<key>E6729AAE-7C1B-45EF-A61D-7C869DA3A499</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E6729AAE-7C1B-45EF-A61D-7C869DA3A499.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578553278.99681401</real>
+			<key>timeStoppedRecording</key>
+			<real>578553374.98861694</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>E6729AAE-7C1B-45EF-A61D-7C869DA3A499</string>
 		</dict>
 		<key>E6DFA31A-4A3D-42D0-9CFE-1EBD463A9F35</key>
 		<dict>
@@ -3558,6 +4710,38 @@
 			<key>uniqueIdentifier</key>
 			<string>E8427083-436A-4F7A-9BAA-50A87F385DC9</string>
 		</dict>
+		<key>EBCA5B4E-1794-4FDD-B83F-59B4E4466006</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EBCA5B4E-1794-4FDD-B83F-59B4E4466006.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552843.26771605</real>
+			<key>timeStoppedRecording</key>
+			<real>578552853.15597403</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>EBCA5B4E-1794-4FDD-B83F-59B4E4466006</string>
+		</dict>
 		<key>EBFCA72C-8422-4AD8-8237-67356BDD433A</key>
 		<dict>
 			<key>className</key>
@@ -3589,6 +4773,102 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>EBFCA72C-8422-4AD8-8237-67356BDD433A</string>
+		</dict>
+		<key>EED5E4EA-9B34-4548-983E-6C1FECE2FCE9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EED5E4EA-9B34-4548-983E-6C1FECE2FCE9.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578555433.56477702</real>
+			<key>timeStoppedRecording</key>
+			<real>578555514.72657299</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>EED5E4EA-9B34-4548-983E-6C1FECE2FCE9</string>
+		</dict>
+		<key>EF8E46ED-CBEE-4D92-841D-2BE0E927A758</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EF8E46ED-CBEE-4D92-841D-2BE0E927A758.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578554600.738585</real>
+			<key>timeStoppedRecording</key>
+			<real>578554841.89017797</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>EF8E46ED-CBEE-4D92-841D-2BE0E927A758</string>
+		</dict>
+		<key>EFBEEDAE-7AD5-434C-BBD6-EF231EFBBE72</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EFBEEDAE-7AD5-434C-BBD6-EF231EFBBE72.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552832.09285104</real>
+			<key>timeStoppedRecording</key>
+			<real>578552843.18260598</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>EFBEEDAE-7AD5-434C-BBD6-EF231EFBBE72</string>
 		</dict>
 		<key>F00EAF0B-30CB-4B99-A40C-EB8290E4534A</key>
 		<dict>
@@ -3622,6 +4902,38 @@
 			<key>uniqueIdentifier</key>
 			<string>F00EAF0B-30CB-4B99-A40C-EB8290E4534A</string>
 		</dict>
+		<key>F19F3663-12FA-46B0-899B-3E502D6820FB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F19F3663-12FA-46B0-899B-3E502D6820FB.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578552915.60956204</real>
+			<key>timeStoppedRecording</key>
+			<real>578552925.56289005</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>F19F3663-12FA-46B0-899B-3E502D6820FB</string>
+		</dict>
 		<key>F5A3630D-9D32-43AA-AA94-C3C461829224</key>
 		<dict>
 			<key>className</key>
@@ -3653,6 +4965,38 @@
 			<string>Debug 4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>F5A3630D-9D32-43AA-AA94-C3C461829224</string>
+		</dict>
+		<key>F6ABB48C-7E34-423A-ABEC-CDE3F34D8C21</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F6ABB48C-7E34-423A-ABEC-CDE3F34D8C21.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578553973.2184</real>
+			<key>timeStoppedRecording</key>
+			<real>578554113.82247996</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>F6ABB48C-7E34-423A-ABEC-CDE3F34D8C21</string>
 		</dict>
 		<key>F6F7EBA7-D135-47A3-8963-F409BD8ED7EE</key>
 		<dict>

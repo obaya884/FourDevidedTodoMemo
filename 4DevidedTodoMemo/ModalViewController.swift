@@ -88,6 +88,7 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // MARK:- SectionTextField Settings
+    // sectionTextFieldをタップした時、値が入ってなければ初期値を代入
     @IBAction func setInitialValueOnSectionTextField() {
         if(self.sectionTextField.text == ""){
             self.sectionTextField.text = self.sectionNameArray[0]
@@ -95,6 +96,7 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // MARK:- ContentTextField Settings
+    // 完了ボタンでキーボードを下げる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.contentTextField.resignFirstResponder()
         return true
