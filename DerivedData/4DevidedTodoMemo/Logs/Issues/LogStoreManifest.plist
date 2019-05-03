@@ -6,33 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
-			<key>timeStartedRecording</key>
-			<real>578457541.28661299</real>
-			<key>timeStoppedRecording</key>
-			<real>578457543.28680003</real>
-			<key>title</key>
-			<string>Build target 4DevidedTodoMemo</string>
-			<key>uniqueIdentifier</key>
-			<string>65FB03E1-D65D-44BC-99FA-9AAD2F3F5C35</string>
-		</dict>
-		<key>7060B960-6100-4EB0-8382-C2FE87533D93</key>
+		<key>46739CD5-E3AC-48D3-98AA-B1400788AF74</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -41,7 +15,85 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>7060B960-6100-4EB0-8382-C2FE87533D93.xcactivitylog</string>
+			<string>46739CD5-E3AC-48D3-98AA-B1400788AF74.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>PopupDialog-cakzjcvvcqpkdobliktumoivnrof</string>
+			<key>timeStartedRecording</key>
+			<real>578504537.82826602</real>
+			<key>timeStoppedRecording</key>
+			<real>578504537.83225906</real>
+			<key>title</key>
+			<string>Build target PopupDialog</string>
+			<key>uniqueIdentifier</key>
+			<string>46739CD5-E3AC-48D3-98AA-B1400788AF74</string>
+		</dict>
+		<key>6B80BF1F-0986-45B8-86BE-3173253CA7B0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>6B80BF1F-0986-45B8-86BE-3173253CA7B0.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
+			<key>timeStartedRecording</key>
+			<real>578518810.023682</real>
+			<key>timeStoppedRecording</key>
+			<real>578518813.14587295</real>
+			<key>title</key>
+			<string>Build target 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>6B80BF1F-0986-45B8-86BE-3173253CA7B0</string>
+		</dict>
+		<key>88E9F578-D489-4DC0-848D-37482C4245F6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>88E9F578-D489-4DC0-848D-37482C4245F6.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>LTHRadioButton-cakzjcvvcqpkdobliktumoivnrof</string>
+			<key>timeStartedRecording</key>
+			<real>578504537.79184496</real>
+			<key>timeStoppedRecording</key>
+			<real>578504538.11118996</real>
+			<key>title</key>
+			<string>Build target LTHRadioButton</string>
+			<key>uniqueIdentifier</key>
+			<string>88E9F578-D489-4DC0-848D-37482C4245F6</string>
+		</dict>
+		<key>8C2F5668-39E3-4FA6-B033-CEB04DDACD71</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>8C2F5668-39E3-4FA6-B033-CEB04DDACD71.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -50,13 +102,13 @@
 			<key>signature</key>
 			<string>Pods-4DevidedTodoMemo-cakzjcvvcqpkdobliktumoivnrof</string>
 			<key>timeStartedRecording</key>
-			<real>578427362.93626297</real>
+			<real>578504538.11290097</real>
 			<key>timeStoppedRecording</key>
-			<real>578427362.93953001</real>
+			<real>578504538.12068796</real>
 			<key>title</key>
 			<string>Build target Pods-4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
-			<string>7060B960-6100-4EB0-8382-C2FE87533D93</string>
+			<string>8C2F5668-39E3-4FA6-B033-CEB04DDACD71</string>
 		</dict>
 		<key>B556C6B5-00D8-4726-AE77-49587D94B884</key>
 		<dict>
@@ -110,7 +162,7 @@
 			<key>uniqueIdentifier</key>
 			<string>BA45AE05-54CB-4A4E-9AE0-182DA77CC340</string>
 		</dict>
-		<key>D519B425-59FC-4DA8-BF32-3412B76EC7D6</key>
+		<key>FAF74ADF-860D-4CA7-B928-CC98579BD6D7</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -119,22 +171,22 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>D519B425-59FC-4DA8-BF32-3412B76EC7D6.xcactivitylog</string>
+			<string>FAF74ADF-860D-4CA7-B928-CC98579BD6D7.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
 				<string>S</string>
 			</dict>
 			<key>signature</key>
-			<string>LTHRadioButton-cakzjcvvcqpkdobliktumoivnrof</string>
+			<string>DynamicBlurView-cakzjcvvcqpkdobliktumoivnrof</string>
 			<key>timeStartedRecording</key>
-			<real>578427362.92356098</real>
+			<real>578504537.82113504</real>
 			<key>timeStoppedRecording</key>
-			<real>578427362.93750298</real>
+			<real>578504537.82536697</real>
 			<key>title</key>
-			<string>Build target LTHRadioButton</string>
+			<string>Build target DynamicBlurView</string>
 			<key>uniqueIdentifier</key>
-			<string>D519B425-59FC-4DA8-BF32-3412B76EC7D6</string>
+			<string>FAF74ADF-860D-4CA7-B928-CC98579BD6D7</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

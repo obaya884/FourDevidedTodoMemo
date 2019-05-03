@@ -8,17 +8,13 @@
 
 import UIKit
 import LTHRadioButton
+import PopupDialog
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    
     
     //MARK:- Initialization
     
     //アウトレット変数
-    @IBOutlet var addButton: UIButton!
-    
     @IBOutlet var topLeftSectionNameLabel: UILabel!
     @IBOutlet var topRightSectionNameLabel: UILabel!
     @IBOutlet var bottomLeftSectionNameLabel: UILabel!
@@ -30,6 +26,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var bottomRightSectionTableView: UITableView!
     
     //変数
+    // モーダルビューのインスタンス
+    let modalView = ModalViewController(nibName: "ModalViewController", bundle: nil)
+    
     var tag: Int = 0
     var dataArrays: [[String]] = []
     
@@ -54,7 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         bottomRightSectionTableView.dataSource = self
         bottomRightSectionTableView.delegate = self
         
-        
         //カスタムセルの登録
         self.topLeftSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.topRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
@@ -64,6 +62,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //データ配列作成
         generateDataArrays()
         
+        //ModalViewのdelegate
+        modalView.delegate = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.topLeftSectionTableView.flashScrollIndicators()
+        self.topRightSectionTableView.flashScrollIndicators()
+        self.bottomLeftSectionTableView.flashScrollIndicators()
+        self.bottomRightSectionTableView.flashScrollIndicators()
+        
+    }
+    
+    //タスク追加ボタン押下時のメソッド(PopupDialogを用いたモーダル表示）
+    @IBAction func pushPlusButton(){
+        
+        //モーダル外のオーバーレイ表示の設定
+        let overlayAppearance = PopupDialogOverlayView.appearance()
+        overlayAppearance.color           = .white
+        overlayAppearance.blurRadius      = 5
+        overlayAppearance.blurEnabled     = true
+        overlayAppearance.liveBlurEnabled = false
+        overlayAppearance.opacity         = 0.2
+        
+        // 表示したいビューコントローラーを指定してポップアップを作る
+        let popup = PopupDialog(viewController: modalView, transitionStyle: .zoomIn)
+        
+        // 作成したポップアップを表示する
+        present(popup, animated: true, completion: nil)
     }
     
     //データ配列の作成メソッド
@@ -93,7 +121,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tag = 3
         }
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checkTableView(tableView)
@@ -198,6 +225,54 @@ extension ViewController: RadioButtonDelegate{
             self.bottomRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
                 self.bottomRightSectionTableView.reloadData()
+            }
+        }
+    }
+}
+
+extension ViewController: AddButtonDelegate{
+    func afterPushModalViewAddButton(sectionTag: Int, content: String) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            print("catch delegate")
+            print(sectionTag, content)
+            
+            switch sectionTag {
+            case 0:
+                self.topLeftSectionTestArray.insert(content, at: 0)
+                self.generateDataArrays()
+                self.topLeftSectionTableView.beginUpdates()
+                self.topLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.topLeftSectionTableView.endUpdates()
+                self.topLeftSectionTableView.flashScrollIndicators()
+                
+                
+            case 1:
+                self.topRightSectionTestArray.insert(content, at: 0)
+                self.generateDataArrays()
+                self.topRightSectionTableView.beginUpdates()
+                self.topRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.topRightSectionTableView.endUpdates()
+                self.topRightSectionTableView.flashScrollIndicators()
+
+                
+            case 2:
+                self.bottomLeftSectionTestArray.insert(content, at: 0)
+                self.generateDataArrays()
+                self.bottomLeftSectionTableView.beginUpdates()
+                self.bottomLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.bottomLeftSectionTableView.endUpdates()
+                self.bottomLeftSectionTableView.flashScrollIndicators()
+                
+            case 3:
+                self.bottomRightSectionTestArray.insert(content, at: 0)
+                self.generateDataArrays()
+                self.bottomRightSectionTableView.beginUpdates()
+                self.bottomRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.bottomRightSectionTableView.endUpdates()
+                self.bottomRightSectionTableView.flashScrollIndicators()
+                
+            default:
+                break
             }
         }
     }

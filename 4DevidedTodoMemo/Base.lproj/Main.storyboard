@@ -169,13 +169,15 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushPlusButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8h-Es-1we"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="dnY-H2-Wv0" id="Dsl-h0-Eb9"/>
                         <outlet property="bottomLeftSectionNameLabel" destination="ALa-F8-f8o" id="xN6-Cm-Y7G"/>
                         <outlet property="bottomLeftSectionTableView" destination="JF6-Di-Z5D" id="Ygk-5C-BER"/>
                         <outlet property="bottomRightSectionNameLabel" destination="6y0-ez-pUO" id="SN2-81-NlY"/>
