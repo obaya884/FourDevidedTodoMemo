@@ -14,12 +14,63 @@ protocol AddButtonDelegate {
 
 class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
-    let sectionNameArray: [String] = ["生活", "仕事", "成長", "趣味"]
+    var sectionNameArray: [String] = []
     var delegate: AddButtonDelegate?
     var sectionPickerView: UIPickerView = UIPickerView()
     
     @IBOutlet var sectionTextField: UITextField!
     @IBOutlet var contentTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        contentTextField.delegate = self
+        sectionTextField.delegate = self
+        sectionPickerView.delegate = self
+        sectionPickerView.dataSource = self
+        sectionPickerView.showsSelectionIndicator = true
+        
+        //PickerView ToolBar Setings
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ModalViewController.done))
+        toolbar.setItems([flexibleItem, doneItem], animated: true)
+        
+        
+        // sectionTextField settings
+        self.sectionTextField.inputView = sectionPickerView
+        self.sectionTextField.inputAccessoryView = toolbar
+        self.sectionTextField.tintColor = .clear
+        
+        // ContentTextField Settings
+        self.contentTextField.returnKeyType = .done
+        
+        // sectionPickerView Initial Setting
+        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //PickerView Title Settings
+        sectionNameArray.removeAll()
+        
+        let userDefaults: UserDefaults = UserDefaults.standard
+        sectionNameArray.append(userDefaults.object(forKey: "topLeftSectionName") as! String)
+        sectionNameArray.append(userDefaults.object(forKey: "topRightSectionName") as! String)
+        sectionNameArray.append(userDefaults.object(forKey: "bottomLeftSectionName") as! String)
+        sectionNameArray.append(userDefaults.object(forKey: "bottomRightSectionName") as! String)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        //入力フォームのリセット
+        self.sectionTextField.text = ""
+        self.contentTextField.text = ""
+        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
+        
+    }
     
     @IBAction func pushAddButton(){
         if (sectionTextField.text == "" && contentTextField.text == ""){
@@ -59,41 +110,21 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        contentTextField.delegate = self
-        sectionPickerView.delegate = self
-        sectionPickerView.dataSource = self
-        sectionPickerView.showsSelectionIndicator = true
-        
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
-        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ModalViewController.done))
-        toolbar.setItems([flexibleItem, doneItem], animated: true)
-        
-        
-        // sectionTextField settings
-        self.sectionTextField.inputView = sectionPickerView
-        self.sectionTextField.inputAccessoryView = toolbar
-        self.sectionTextField.tintColor = .clear
-        
-        // ContentTextField Settings
-        self.contentTextField.returnKeyType = .done
-        
-        // sectionPickerView Initial Setting
-        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
-        
-    }
     
     // MARK:- SectionTextField Settings
     // sectionTextFieldをタップした時、値が入ってなければ初期値を代入
-    @IBAction func setInitialValueOnSectionTextField() {
+    /// テキストフィールド入力状態前
+    ///
+    /// - Parameter textField: 対象のテキストフィールド
+    /// - Returns: trueで入力可 falseで入力不可
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("テキストフィールド入力状態前")
         if(self.sectionTextField.text == ""){
             self.sectionTextField.text = self.sectionNameArray[0]
         }
+        return true
     }
+    
     
     // MARK:- ContentTextField Settings
     // 完了ボタンでキーボードを下げる

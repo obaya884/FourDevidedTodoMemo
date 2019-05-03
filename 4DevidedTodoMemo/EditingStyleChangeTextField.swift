@@ -17,6 +17,7 @@ class LongPressEditableTextField: UITextField, UITextFieldDelegate {
         // Keyboard Setting
         self.returnKeyType = .done
         
+        
     }
     
     /// テキストフィールド入力状態後
@@ -28,6 +29,49 @@ class LongPressEditableTextField: UITextField, UITextFieldDelegate {
         self.backgroundColor = .white
     }
     
+    /// リターンキー入力時
+    ///
+    /// - Parameter textField: 対象のテキストフィールド
+    /// - Returns: trueでリターン実行 falseでリターンを無視
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("リターン入力時")
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    /// フォーカスが外れる前
+    ///
+    /// - Parameter textField: 対象のテキストフィールド
+    /// - Returns: trueでフォーカスを外す falseでフォーカスを外さない
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("フォーカスが外れる前")
+        if(self.text == ""){
+            self.backgroundColor = .red
+            return false
+        }
+        else{
+            //UserDefaultsの登録を上書き
+            //UserDefaults Instance
+            let userDefaults: UserDefaults = UserDefaults.standard
+            switch tag {
+            case 0:
+                userDefaults.set(self.text, forKey: "topLeftSectionName")
+            case 1:
+                userDefaults.set(self.text, forKey: "topRightSectionName")
+            case 2:
+                userDefaults.set(self.text, forKey: "bottomLeftSectionName")
+            case 3:
+                userDefaults.set(self.text, forKey: "bottomRightSectionName")
+            default:
+                break
+            }
+
+        return true
+        }
+    }
+    
     /// フォーカスが外れた後
     ///
     /// - Parameter textField: 対象のテキストフィールド
@@ -37,13 +81,8 @@ class LongPressEditableTextField: UITextField, UITextFieldDelegate {
         self.backgroundColor = .clear
     }
     
-    // 完了ボタンでキーボードを下げる
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.resignFirstResponder()
-        return true
-    }
-    
     //範囲外タップでキーボードを下げる
+    //→viewcontrollerで実装
     
     
     /*

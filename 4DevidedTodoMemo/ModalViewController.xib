@@ -45,9 +45,6 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="setInitialValueOnSectionTextField" destination="-1" eventType="touchDown" id="XeE-72-DwZ"/>
-                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0d-nl-oOW">
                     <rect key="frame" x="99" y="125" width="225" height="30"/>
