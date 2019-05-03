@@ -29,11 +29,12 @@ class CustomTableViewCell: UITableViewCell {
         
         radioButton.onSelect {
             print("call delegate")
+            //処理中のセルを選択不可にする
+            self.isUserInteractionEnabled = false
+            //radioButtonのセレクトアニメーションが終わったくらいでセル削除処理
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
                 self.delegate?.onSelectRadioButton(sender: self.radioButton)
-
             }
-            
         }
         
 //        radioButton.onDeselect {

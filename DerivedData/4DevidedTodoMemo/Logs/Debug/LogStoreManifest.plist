@@ -2630,6 +2630,38 @@
 			<key>uniqueIdentifier</key>
 			<string>A5F4E858-3D58-46EB-902E-64C3A7FE67CF</string>
 		</dict>
+		<key>A73592F0-7F5E-476C-A7AC-70410A3D0545</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A73592F0-7F5E-476C-A7AC-70410A3D0545.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>4DevidedTodoMemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>4DevidedTodoMemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>timeStartedRecording</key>
+			<real>578548851.92443001</real>
+			<key>timeStoppedRecording</key>
+			<real>578548960.50168395</real>
+			<key>title</key>
+			<string>Debug 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>A73592F0-7F5E-476C-A7AC-70410A3D0545</string>
+		</dict>
 		<key>A89E0118-30DD-4235-A957-06A323CAC7B9</key>
 		<dict>
 			<key>className</key>
