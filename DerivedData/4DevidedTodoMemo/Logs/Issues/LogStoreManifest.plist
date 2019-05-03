@@ -84,32 +84,6 @@
 			<key>uniqueIdentifier</key>
 			<string>7EC41BB3-94BC-48B8-A8FB-DB709BFB38A3</string>
 		</dict>
-		<key>7F3438AD-8035-401C-ADD5-B3775C2F217E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>7F3438AD-8035-401C-ADD5-B3775C2F217E.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
-			<key>timeStartedRecording</key>
-			<real>578587977.685992</real>
-			<key>timeStoppedRecording</key>
-			<real>578587983.22817397</real>
-			<key>title</key>
-			<string>Build target 4DevidedTodoMemo</string>
-			<key>uniqueIdentifier</key>
-			<string>7F3438AD-8035-401C-ADD5-B3775C2F217E</string>
-		</dict>
 		<key>9AD15A6B-B93B-48B8-80F3-0FCCC6F4A507</key>
 		<dict>
 			<key>className</key>
@@ -213,6 +187,32 @@
 			<string>Build target Pods-4DevidedTodoMemo</string>
 			<key>uniqueIdentifier</key>
 			<string>E49CFB9A-C5DD-4AEE-BD31-20C40F33E717</string>
+		</dict>
+		<key>E4E2AFC2-9F38-422C-8D80-170258F6909F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>E4E2AFC2-9F38-422C-8D80-170258F6909F.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>4DevidedTodoMemo-duthbodwzjlpwcdypfkcbdojuybt</string>
+			<key>timeStartedRecording</key>
+			<real>578595144.25849497</real>
+			<key>timeStoppedRecording</key>
+			<real>578595145.88919199</real>
+			<key>title</key>
+			<string>Build target 4DevidedTodoMemo</string>
+			<key>uniqueIdentifier</key>
+			<string>E4E2AFC2-9F38-422C-8D80-170258F6909F</string>
 		</dict>
 		<key>EF4F54A0-B9B4-4123-9311-B4535ED49B26</key>
 		<dict>

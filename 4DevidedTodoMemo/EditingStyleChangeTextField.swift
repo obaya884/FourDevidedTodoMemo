@@ -16,8 +16,6 @@ class LongPressEditableTextField: UITextField, UITextFieldDelegate {
         
         // Keyboard Setting
         self.returnKeyType = .done
-        
-        
     }
     
     /// テキストフィールド入力状態後
@@ -35,7 +33,6 @@ class LongPressEditableTextField: UITextField, UITextFieldDelegate {
     /// - Returns: trueでリターン実行 falseでリターンを無視
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("リターン入力時")
-        
         // キーボードを閉じる
         textField.resignFirstResponder()
         return true

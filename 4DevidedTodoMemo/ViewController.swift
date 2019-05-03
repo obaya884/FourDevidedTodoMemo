@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.bottomRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         
         //SectionNameTextFieldの値を取得
-        //初期値を設定(ユーザーが変更しない場合はこれが取り出される)
+        //初期値を設定(ユーザーが変更してない場合はこれが取り出される)
         userDefaults.register(defaults: ["topLeftSectionName": "生活",
                                          "topRightSectionName": "仕事",
                                          "bottomLeftSectionName": "成長",
@@ -80,6 +80,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //TodoArrayに値を取得
         //初期値の設定（本番では除く）
+        //デバッグ用に起動のたびに初期化
+        if let domain = Bundle.main.bundleIdentifier {
+            userDefaults.removePersistentDomain(forName: domain)
+        }
+        
         userDefaults.register(defaults:
             ["topLeftSectionTodo": ["夕食の買い物", "日用品の買い物", "部屋掃除", "洗車", "テレビ買い替え", "犬の散歩"],
              "topRightSectionTodo": ["書類整理", "会議資料作成", "上司打ち合わせ", "週報作成", "引き継ぎ用意", "データ提出"],
@@ -92,7 +97,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         bottomLeftSectionTodoArray = userDefaults.array(forKey: "bottomLeftSectionTodo") as! [String]
         bottomRightSectionTodoArray = userDefaults.array(forKey: "bottomRightSectionTodo") as! [String]
     
-        //データ配列作成
+        //全データ配列作成
         generateDataArrays()
         
         
@@ -199,18 +204,25 @@ extension ViewController: RadioButtonDelegate{
         let cell = sender.superview?.superview as? CustomTableViewCell
         let tableview = cell?.superview as? UITableView
         
+        //UserDefaultsのインスタンス
+        let userDefaults: UserDefaults = UserDefaults.standard
+        
         if( (tableview?.isEqual(topLeftSectionTableView))! ){
             
             let indexPath = self.topLeftSectionTableView.indexPath(for: cell!)
             
-            //1次元データの削除
+            //1次データの削除
             self.topLeftSectionTodoArray.remove(at: indexPath!.row)
 //            print(topLeftSectionTodoArray)
             
-            //2次元データ再生成
+            //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
             generateDataArrays()
+            
+            //UserDefaultsの保存情報にも変更を反映
+            userDefaults.removeObject(forKey: "topLeftSectionTodo")
+            userDefaults.set(topLeftSectionTodoArray, forKey: "topLeftSectionTodo")
             
             //tableviewの操作
             self.topLeftSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
@@ -222,14 +234,19 @@ extension ViewController: RadioButtonDelegate{
         else if( (tableview?.isEqual(topRightSectionTableView))! ){
             let indexPath = self.topRightSectionTableView.indexPath(for: cell!)
             
-            //1次元データの削除
+            //1次データの削除
             self.topRightSectionTodoArray.remove(at: indexPath!.row)
 //            print(topRightSectionTodoArray)
             
-            //2次元データ再生成
+            //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
             generateDataArrays()
+            
+            //UserDefaultsの保存情報にも変更を反映
+            userDefaults.removeObject(forKey: "topRightSectionTodo")
+            userDefaults.set(topRightSectionTodoArray, forKey: "topRightSectionTodo")
+            
             
             //tableviewの操作
             self.topRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
@@ -240,14 +257,19 @@ extension ViewController: RadioButtonDelegate{
         else if( (tableview?.isEqual(bottomLeftSectionTableView))! ){
             let indexPath = self.bottomLeftSectionTableView.indexPath(for: cell!)
             
-            //1次元データの削除
+            //1次データの削除
             self.bottomLeftSectionTodoArray.remove(at: indexPath!.row)
 //            print(bottomLeftSectionTodoArray)
             
-            //2次元データ再生成
+            //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
             generateDataArrays()
+            
+            //UserDefaultsの保存情報にも変更を反映
+            userDefaults.removeObject(forKey: "bottomLeftSectionTodo")
+            userDefaults.set(bottomLeftSectionTodoArray, forKey: "bottomLeftSectionTodo")
+            
             
             //tableviewの操作
             self.bottomLeftSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
@@ -258,14 +280,18 @@ extension ViewController: RadioButtonDelegate{
         else if( (tableview?.isEqual(bottomRightSectionTableView))! ){
             let indexPath = self.bottomRightSectionTableView.indexPath(for: cell!)
             
-            //1次元データの削除
+            //1次データの削除
             self.bottomRightSectionTodoArray.remove(at: indexPath!.row)
 //            print(bottomRightSectionTodoArray)
             
-            //2次元データ再生成
+            //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
             generateDataArrays()
+            
+            //UserDefaultsの保存情報にも変更を反映
+            userDefaults.removeObject(forKey: "bottomRightSectionTodo")
+            userDefaults.set(bottomRightSectionTodoArray, forKey: "bottomRightSectionTodo")
             
             //tableviewの操作
             self.bottomRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
@@ -282,6 +308,8 @@ extension ViewController: AddButtonDelegate{
             print("catch delegate")
             print(sectionTag, content)
             
+            let userDefaults: UserDefaults = UserDefaults.standard
+            
             switch sectionTag {
             case 0:
                 self.topLeftSectionTodoArray.insert(content, at: 0)
@@ -290,7 +318,9 @@ extension ViewController: AddButtonDelegate{
                 self.topLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                 self.topLeftSectionTableView.endUpdates()
                 self.topLeftSectionTableView.flashScrollIndicators()
-                
+                //UserDefaultsの保存情報にも変更を反映
+                userDefaults.removeObject(forKey: "topLeftSectionTodo")
+                userDefaults.set(self.topLeftSectionTodoArray, forKey: "topLeftSectionTodo")
                 
             case 1:
                 self.topRightSectionTodoArray.insert(content, at: 0)
@@ -299,7 +329,9 @@ extension ViewController: AddButtonDelegate{
                 self.topRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                 self.topRightSectionTableView.endUpdates()
                 self.topRightSectionTableView.flashScrollIndicators()
-                
+                //UserDefaultsの保存情報にも変更を反映
+                userDefaults.removeObject(forKey: "topRightSectionTodo")
+                userDefaults.set(self.topRightSectionTodoArray, forKey: "topRightSectionTodo")
                 
             case 2:
                 self.bottomLeftSectionTodoArray.insert(content, at: 0)
@@ -308,6 +340,9 @@ extension ViewController: AddButtonDelegate{
                 self.bottomLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                 self.bottomLeftSectionTableView.endUpdates()
                 self.bottomLeftSectionTableView.flashScrollIndicators()
+                //UserDefaultsの保存情報にも変更を反映
+                userDefaults.removeObject(forKey: "bottomLeftSectionTodo")
+                userDefaults.set(self.bottomLeftSectionTodoArray, forKey: "bottomLeftSectionTodo")
                 
             case 3:
                 self.bottomRightSectionTodoArray.insert(content, at: 0)
@@ -316,6 +351,9 @@ extension ViewController: AddButtonDelegate{
                 self.bottomRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                 self.bottomRightSectionTableView.endUpdates()
                 self.bottomRightSectionTableView.flashScrollIndicators()
+                //UserDefaultsの保存情報にも変更を反映
+                userDefaults.removeObject(forKey: "bottomRightSectionTodo")
+                userDefaults.set(self.bottomRightSectionTodoArray, forKey: "bottomRightSectionTodo")
                 
             default:
                 break
