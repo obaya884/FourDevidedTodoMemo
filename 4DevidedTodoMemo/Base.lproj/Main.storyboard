@@ -178,9 +178,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomLeftSectionNameTextField" destination="zAf-tT-LaY" id="5hu-3U-bi6"/>
                         <outlet property="bottomLeftSectionTableView" destination="JF6-Di-Z5D" id="Ygk-5C-BER"/>
+                        <outlet property="bottomRightSectionNameTextField" destination="bQx-Ou-ZvY" id="5WP-lg-AtO"/>
                         <outlet property="bottomRightSectionTableView" destination="ADV-Oh-r08" id="0yp-qx-uPE"/>
+                        <outlet property="topLeftSectionNameTextField" destination="J6F-4T-Pbh" id="X5j-W6-dec"/>
                         <outlet property="topLeftSectionTableView" destination="lNi-EP-Azd" id="vsm-VJ-I6p"/>
+                        <outlet property="topRightSectionNameTextField" destination="fOw-Fv-ue4" id="Vvj-9W-efr"/>
                         <outlet property="topRightSectionTableView" destination="nLl-x7-UuX" id="bWQ-W0-U1c"/>
                     </connections>
                 </viewController>

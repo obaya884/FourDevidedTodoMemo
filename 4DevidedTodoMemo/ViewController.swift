@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // モーダルビューのインスタンス
     let modalView = ModalViewController(nibName: "ModalViewController", bundle: nil)
     
+    //制御用
     var tag: Int = 0
     var dataArrays: [[String]] = []
     
@@ -38,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var bottomRightSectionTestArray: [String]! = ["録画の消化", "ゲームプレイ", "チケット申し込み", "写真整理", "レタッチ"]
     
     
-    //MARK:- viewDidLoad
+    //MARK:- Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -106,20 +107,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //画面外をタッチした時にキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        if(topLeftSectionNameTextField.isFirstResponder
-//            || topRightSectionNameTextField.isFirstResponder
-//            || bottomLeftSectionNameTextField.isFirstResponder
-//            || bottomRightSectionNameTextField.isFirstResponder ){
-            //どれが反応しても閉じれるようにviewに対してendEditngする
-            print("touches began")
+            //どのtextfield編集に対しても閉じれるようにviewに対してendEditngする
             self.view.endEditing(true)
-//        UIApplication.shared.keyWindow?.endEditing(true)
-//        }
     }
     
     
     
-    // MARK:- TableView
+    // MARK:- TableView Settings
     // tableviewの処理を分岐するメソッド
     func checkTableView(_ tableView: UITableView) -> Void{
         if (tableView.isEqual(topLeftSectionTableView)) {
@@ -161,6 +155,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 }
 
+// MARK:- Original Protocol Extentions
 extension ViewController: RadioButtonDelegate{
     func onSelectRadioButton(sender: LTHRadioButton) {
         print("catch delegate")
