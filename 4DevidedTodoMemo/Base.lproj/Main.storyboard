@@ -1,159 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_DevidedTodoMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="_DevidedTodoMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYX-vH-Z4y">
-                                <rect key="frame" x="0.0" y="20" width="188" height="324"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qEg-u7-Lwf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-EP-Azd" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="172" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mx7-Sg-7Qa" customClass="CustomTableViewCell" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="172" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mx7-Sg-7Qa" id="td2-E4-YWb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生活" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-4T-Pbh" customClass="LongPressEditableTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="286" width="96" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-Od-V1Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="331.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYX-vH-Z4y" userLabel="TopLeftView">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="331.5"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-EP-Azd" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="8" width="171.5" height="270"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生活" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-4T-Pbh" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="282" width="88" height="39.5"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98039215686274506" green="0.55294117647058827" blue="0.38431372549019605" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="lNi-EP-Azd" firstAttribute="leading" secondItem="ZYX-vH-Z4y" secondAttribute="leading" constant="8" id="JvJ-Ak-KbP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="J6F-4T-Pbh" secondAttribute="bottom" constant="10" id="OMk-Cs-YQL"/>
+                                                    <constraint firstItem="lNi-EP-Azd" firstAttribute="top" secondItem="ZYX-vH-Z4y" secondAttribute="top" constant="8" id="PRU-rn-5yu"/>
+                                                    <constraint firstItem="lNi-EP-Azd" firstAttribute="centerX" secondItem="ZYX-vH-Z4y" secondAttribute="centerX" id="eMD-sp-Lil"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lNi-EP-Azd" secondAttribute="trailing" constant="8" id="kbZ-7k-b6A"/>
+                                                    <constraint firstItem="J6F-4T-Pbh" firstAttribute="centerX" secondItem="ZYX-vH-Z4y" secondAttribute="centerX" id="q1O-GP-qVN"/>
+                                                    <constraint firstItem="J6F-4T-Pbh" firstAttribute="top" secondItem="lNi-EP-Azd" secondAttribute="bottom" constant="4" id="yUI-pf-70x"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-aJ-EJV" userLabel="TopRightView">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="331.5"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nLl-x7-UuX" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="8" width="171.5" height="270"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="仕事" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-Fv-ue4" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="282" width="88" height="39.5"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.64313725490196072" green="0.792156862745098" blue="0.73725490196078436" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="fOw-Fv-ue4" secondAttribute="bottom" constant="10" id="0st-Bh-p5g"/>
+                                                    <constraint firstItem="fOw-Fv-ue4" firstAttribute="top" secondItem="nLl-x7-UuX" secondAttribute="bottom" constant="4" id="DUj-Vn-qX6"/>
+                                                    <constraint firstItem="nLl-x7-UuX" firstAttribute="top" secondItem="UAg-aJ-EJV" secondAttribute="top" constant="8" id="EPq-sS-gkh"/>
+                                                    <constraint firstItem="fOw-Fv-ue4" firstAttribute="centerX" secondItem="UAg-aJ-EJV" secondAttribute="centerX" id="IS2-GU-OZR"/>
+                                                    <constraint firstItem="nLl-x7-UuX" firstAttribute="centerX" secondItem="UAg-aJ-EJV" secondAttribute="centerX" id="nMx-ry-wTd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nLl-x7-UuX" secondAttribute="trailing" constant="8" id="o8t-pl-HYE"/>
+                                                    <constraint firstItem="nLl-x7-UuX" firstAttribute="leading" secondItem="UAg-aJ-EJV" secondAttribute="leading" constant="8" id="tbb-lL-8xu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yp0-YW-T7y">
+                                        <rect key="frame" x="0.0" y="335.5" width="375" height="331.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-7U-q2A" userLabel="BottomLeftView">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="331.5"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JF6-Di-Z5D" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="53.5" width="171.5" height="270"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="成長" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-tT-LaY" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="10" width="88" height="39.5"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.67450980392156867" green="0.74117647058823533" blue="0.47058823529411764" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="JF6-Di-Z5D" secondAttribute="bottom" constant="8" id="7r4-Nl-1ze"/>
+                                                    <constraint firstItem="JF6-Di-Z5D" firstAttribute="centerX" secondItem="Kia-7U-q2A" secondAttribute="centerX" id="EUJ-EN-uGB"/>
+                                                    <constraint firstItem="zAf-tT-LaY" firstAttribute="top" secondItem="Kia-7U-q2A" secondAttribute="top" constant="10" id="Qn4-YV-Qes"/>
+                                                    <constraint firstItem="zAf-tT-LaY" firstAttribute="centerX" secondItem="Kia-7U-q2A" secondAttribute="centerX" id="RvN-LZ-0l9"/>
+                                                    <constraint firstItem="JF6-Di-Z5D" firstAttribute="leading" secondItem="Kia-7U-q2A" secondAttribute="leading" constant="8" id="TeQ-PA-5c4"/>
+                                                    <constraint firstItem="JF6-Di-Z5D" firstAttribute="top" secondItem="zAf-tT-LaY" secondAttribute="bottom" constant="4" id="bVi-mE-4bw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JF6-Di-Z5D" secondAttribute="trailing" constant="8" id="u0f-7i-Pg8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-No-Aap" userLabel="BottomRightView">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="331.5"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-Oh-r08" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="53.5" width="171.5" height="270"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="趣味" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-Ou-ZvY" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="10" width="88" height="39.5"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.91764705882352937" green="0.70588235294117641" blue="0.39215686274509803" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="ADV-Oh-r08" firstAttribute="centerX" secondItem="ocj-No-Aap" secondAttribute="centerX" id="0BZ-fs-Qbk"/>
+                                                    <constraint firstItem="bQx-Ou-ZvY" firstAttribute="top" secondItem="ocj-No-Aap" secondAttribute="top" constant="10" id="6qk-Kq-Mqf"/>
+                                                    <constraint firstItem="bQx-Ou-ZvY" firstAttribute="centerX" secondItem="ocj-No-Aap" secondAttribute="centerX" id="U2G-BP-EJ8"/>
+                                                    <constraint firstItem="ADV-Oh-r08" firstAttribute="leading" secondItem="ocj-No-Aap" secondAttribute="leading" constant="8" id="bpk-bJ-WLP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ADV-Oh-r08" secondAttribute="trailing" constant="8" id="bvg-UD-1rQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ADV-Oh-r08" secondAttribute="bottom" constant="8" id="o8s-49-lgZ"/>
+                                                    <constraint firstItem="ADV-Oh-r08" firstAttribute="top" secondItem="bQx-Ou-ZvY" secondAttribute="bottom" constant="4" id="roW-Bk-EFN"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.55294117647058827" blue="0.38431372549019605" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-7U-q2A">
-                                <rect key="frame" x="0.0" y="344" width="188" height="324"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JF6-Di-Z5D" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="46" width="172" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JBA-71-xdk" customClass="CustomTableViewCell" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="172" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JBA-71-xdk" id="hhf-vM-u3X">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="成長" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-tT-LaY" customClass="LongPressEditableTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="8" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.67450980392156867" green="0.74117647058823533" blue="0.47058823529411764" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-aJ-EJV">
-                                <rect key="frame" x="188" y="20" width="188" height="324"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nLl-x7-UuX" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="172" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IZS-aK-GyD" customClass="CustomTableViewCell" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="172" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IZS-aK-GyD" id="pt8-I1-yM8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="仕事" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-Fv-ue4" customClass="LongPressEditableTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="286" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64313725490196072" green="0.792156862745098" blue="0.73725490196078436" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-No-Aap">
-                                <rect key="frame" x="188" y="344" width="188" height="324"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-Oh-r08" customClass="TouchEventChainTableView" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="46" width="172" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="raa-NM-WLT" customClass="CustomTableViewCell" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="172" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="raa-NM-WLT" id="gr5-Sj-XIz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="趣味" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-Ou-ZvY" customClass="LongPressEditableTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="8" width="97" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.91764705882352937" green="0.70588235294117641" blue="0.39215686274509803" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-lf-ET5">
-                                <rect key="frame" x="0.0" y="342" width="376" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-lf-ET5" userLabel="Horizontal Line">
+                                <rect key="frame" x="0.0" y="331.5" width="375" height="4"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="VfX-Wm-bfl"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kG3-Dq-b9L">
-                                <rect key="frame" x="186" y="20" width="4" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kG3-Dq-b9L" userLabel="Vertical Line">
+                                <rect key="frame" x="185.5" y="0.0" width="4" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="4" id="6YT-6H-oDQ"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnY-H2-Wv0" customClass="IBDesignableButton" customModule="_DevidedTodoMemo" customModuleProvider="target">
-                                <rect key="frame" x="154" y="310" width="68" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnY-H2-Wv0" customClass="IBDesignableButton" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                <rect key="frame" x="155" y="301" width="65" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.55294117647058827" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dnY-H2-Wv0" secondAttribute="height" multiplier="1:1" id="qVc-RW-Jg5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <state key="normal" title="＋">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +169,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dnY-H2-Wv0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9E7-Om-wHA"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="F78-xb-gdn"/>
+                            <constraint firstAttribute="trailing" secondItem="KnP-lf-ET5" secondAttribute="trailing" id="NsA-Ya-spo"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Tpb-YG-zeB"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bAe-cx-b6y"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="baJ-Gp-eiJ"/>
+                            <constraint firstItem="KnP-lf-ET5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cdz-Oh-UQV"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="fNo-I9-rJP"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gQb-JX-qaC"/>
+                            <constraint firstItem="dnY-H2-Wv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jxo-HI-Gvn"/>
+                            <constraint firstItem="kG3-Dq-b9L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nLr-2w-WFp"/>
+                            <constraint firstItem="kG3-Dq-b9L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oz9-fz-zjv"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r1z-ac-VNm"/>
+                            <constraint firstItem="kG3-Dq-b9L" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="vHp-QA-hJk"/>
+                            <constraint firstItem="KnP-lf-ET5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vLT-zv-iVP"/>
+                            <constraint firstItem="qEg-u7-Lwf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zgb-bF-2X6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

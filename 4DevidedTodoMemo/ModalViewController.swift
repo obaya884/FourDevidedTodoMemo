@@ -12,7 +12,7 @@ protocol AddButtonDelegate {
     func afterPushModalViewAddButton(sectionTag: Int, content: String)
 }
 
-class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ModalViewController: UIViewController {
     
     var sectionNameArray: [String] = []
     var delegate: AddButtonDelegate?
@@ -29,15 +29,13 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         sectionTextField.delegate = self
         sectionPickerView.delegate = self
         sectionPickerView.dataSource = self
-        sectionPickerView.showsSelectionIndicator = true
         
         //PickerView ToolBar Setings
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ModalViewController.done))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolbar.setItems([flexibleItem, doneItem], animated: true)
-        
-        
+                
         // sectionTextField settings
         self.sectionTextField.inputView = sectionPickerView
         self.sectionTextField.inputAccessoryView = toolbar
@@ -50,6 +48,11 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
         
     }
+    
+    @objc func done() {
+        self.sectionTextField.endEditing(true)
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -109,7 +112,10 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             
         }
     }
-    
+}
+
+
+extension ModalViewController: UITextFieldDelegate {
     
     // MARK:- SectionTextField Settings
     // sectionTextFieldをタップした時、値が入ってなければ初期値を代入
@@ -133,7 +139,11 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return true
     }
     
-    // MARK:- PickerView Settings
+}
+
+// MARK:- PickerView Settings
+extension ModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -153,26 +163,5 @@ class ModalViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 50
     }
-    
-    
-    @objc func done() {
-        self.sectionTextField.endEditing(true)
-    }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.sectionTextField.endEditing(true)
-//        self.contentTextField.endEditing(true)
-//
-//    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

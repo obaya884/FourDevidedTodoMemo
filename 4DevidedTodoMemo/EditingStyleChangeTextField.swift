@@ -1,5 +1,5 @@
 //
-//  LongPressEditableTextField.swift
+//  EditingStyleChangeEditableTextField.swift
 //  4DevidedTodoMemo
 //
 //  Created by 大林拓実 on 2019/05/03.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LongPressEditableTextField: UITextField, UITextFieldDelegate {
+class EditingStyleChangeTextField: UITextField, UITextFieldDelegate {
     
     override func awakeFromNib() {
         self.delegate = self

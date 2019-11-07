@@ -20,8 +20,6 @@ class CustomTableViewCell: UITableViewCell {
     
     var delegate: RadioButtonDelegate?
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,10 +34,6 @@ class CustomTableViewCell: UITableViewCell {
                 self.delegate?.onSelectRadioButton(sender: self.radioButton)
             }
         }
-        
-//        radioButton.onDeselect {
-//            self.taskLabel.text = "deselected"
-//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

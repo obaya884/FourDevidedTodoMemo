@@ -37,7 +37,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="radioButton" destination="xt9-uM-qR5" id="5EA-1M-vSA"/>
-                <outlet property="taskLabel" destination="WUV-vz-MDu" id="6hl-so-Ou6"/>
+                <outlet property="taskLabel" destination="WUV-vz-MDu" id="KR3-ij-mO8"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </tableViewCell>
