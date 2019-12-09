@@ -63,6 +63,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.topRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.bottomLeftSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.bottomRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+
+        topLeftSectionTableView.estimatedRowHeight = 44
+        topRightSectionTableView.estimatedRowHeight = 44
+        bottomLeftSectionTableView.estimatedRowHeight = 44
+        bottomRightSectionTableView.estimatedRowHeight = 44
+        
+        topLeftSectionTableView.rowHeight = UITableView.automaticDimension
+        topRightSectionTableView.rowHeight = UITableView.automaticDimension
+        bottomLeftSectionTableView.rowHeight = UITableView.automaticDimension
+        bottomRightSectionTableView.rowHeight = UITableView.automaticDimension
         
         //SectionNameTextFieldの値を取得
         //初期値を設定(ユーザーが変更してない場合はこれが取り出される)
@@ -162,6 +172,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checkTableView(tableView)
         return itemNameDataArrays[tag].count
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        tableView.estimatedRowHeight = 44
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
