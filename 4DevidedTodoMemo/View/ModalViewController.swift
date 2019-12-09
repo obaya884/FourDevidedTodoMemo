@@ -24,36 +24,51 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         contentTextField.delegate = self
         sectionTextField.delegate = self
+        
         sectionPickerView.delegate = self
         sectionPickerView.dataSource = self
-        
+
+        setUpTextField(textField: contentTextField)
+        setUpTextField(textField: sectionTextField)
+        setUpSectionPickerView()
+    }
+
+    func setUpTextField(textField: UITextField) {
+        textField.returnKeyType = .done
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func setUpSectionPickerView() {
         //PickerView ToolBar Setings
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolbar.setItems([flexibleItem, doneItem], animated: true)
-                
-        // sectionTextField settings
+        
+        // sectionTextField input settings
         self.sectionTextField.inputView = sectionPickerView
         self.sectionTextField.inputAccessoryView = toolbar
-        self.sectionTextField.tintColor = .clear
-        
-        // ContentTextField Settings
-        self.contentTextField.returnKeyType = .done
         
         // sectionPickerView Initial Setting
         self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
-        
+    }
+    
+    func resetTextFieldState() {
+        //入力フォームのリセット
+        sectionTextField.layer.borderColor = UIColor.black.cgColor
+        contentTextField.layer.borderColor = UIColor.black.cgColor
+        self.sectionTextField.text = ""
+        self.contentTextField.text = ""
+        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
     }
     
     @objc func done() {
         self.sectionTextField.endEditing(true)
     }
 
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -68,28 +83,22 @@ class ModalViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        //入力フォームのリセット
-        self.sectionTextField.text = ""
-        self.contentTextField.text = ""
-        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
-        
+        super.viewDidDisappear(animated)
+        resetTextFieldState()
     }
     
     @IBAction func pushAddButton(){
         if (sectionTextField.text == "" && contentTextField.text == ""){
-            print("no section, no content")
-            //            sectionTextField.backgroundColor = .red
-            //            contentTextField.backgroundColor = .red
+            sectionTextField.layer.borderColor = UIColor.red.cgColor
+            contentTextField.layer.borderColor = UIColor.red.cgColor
         }
         else if(sectionTextField.text == "" && contentTextField.text != ""){
-            print("no section")
-            //            sectionTextField.backgroundColor = .red
-            
+            sectionTextField.layer.borderColor = UIColor.red.cgColor
+            contentTextField.layer.borderColor = UIColor.black.cgColor
         }
         else if(sectionTextField.text != "" && contentTextField.text == ""){
-            print("no content")
-            //            contentTextField.backgroundColor = .red
-            
+            sectionTextField.layer.borderColor = UIColor.black.cgColor
+            contentTextField.layer.borderColor = UIColor.red.cgColor
         }
         else{
             var sectionTag: Int = 0
@@ -99,46 +108,45 @@ class ModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-            
-            //入力フォームのリセット
-            self.sectionTextField.text = ""
-            self.contentTextField.text = ""
-            self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
-            
-            self.dismiss(animated: true, completion: nil)
-            print(sectionTag, content)
-            print("call delegate")
             self.delegate?.afterPushModalViewAddButton(sectionTag: sectionTag, content: content)
-            
+          
+            resetTextFieldState()
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
 
-
 extension ModalViewController: UITextFieldDelegate {
     
-    // MARK:- SectionTextField Settings
-    // sectionTextFieldをタップした時、値が入ってなければ初期値を代入
-    /// テキストフィールド入力状態前
-    ///
-    /// - Parameter textField: 対象のテキストフィールド
-    /// - Returns: trueで入力可 falseで入力不可
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        print("テキストフィールド入力状態前")
         if(self.sectionTextField.text == ""){
             self.sectionTextField.text = self.sectionNameArray[0]
         }
         return true
     }
     
-    
-    // MARK:- ContentTextField Settings
-    // 完了ボタンでキーボードを下げる
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.contentTextField.resignFirstResponder()
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text != "" {
+            textField.layer.borderColor = UIColor.black.cgColor
+        }
         return true
     }
     
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            textField.layer.borderColor = UIColor.black.cgColor
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == "" {
+            textField.layer.borderColor = UIColor.red.cgColor
+            return false
+        }
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 // MARK:- PickerView Settings
@@ -163,5 +171,4 @@ extension ModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 50
     }
-    
 }

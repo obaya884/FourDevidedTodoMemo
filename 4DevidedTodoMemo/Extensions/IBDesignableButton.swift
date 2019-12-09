@@ -10,15 +10,6 @@
 import UIKit
 
 @IBDesignable class IBDesignableButton: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
     // 角丸の半径(0で四角形)
     @IBInspectable var cornerRadius: CGFloat = 0.0
     

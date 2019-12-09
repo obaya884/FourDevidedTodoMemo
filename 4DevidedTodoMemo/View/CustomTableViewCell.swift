@@ -23,23 +23,19 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        radioButton.selectedColor = UIColor.red
+        radioButton.selectedColor = UIColor(hex: "FF8D3F")
         
-        radioButton.onSelect {
-            print("call delegate")
-            //処理中のセルを選択不可にする
-            self.isUserInteractionEnabled = false
+        radioButton.onSelect { [unowned self] in
             //radioButtonのセレクトアニメーションが終わったくらいでセル削除処理
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
                 self.delegate?.onSelectRadioButton(sender: self.radioButton)
+                
+                // TableViewCellの再利用で悪さされるぽいので最後にdeselectしとく
+                self.radioButton.deselect()
             }
         }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        radioButton.onDeselect{}
     }
     
 }

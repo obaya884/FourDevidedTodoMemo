@@ -12,12 +12,7 @@ import UIKit
 class TouchEventChainTableView: UITableView {
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("chain to the next responder")
         // touchesBeganを次のResponderへ
         self.next?.touchesBegan(touches, with: event)
-    }
-    
-    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touches ended")
     }
 }

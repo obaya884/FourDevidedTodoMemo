@@ -8,49 +8,41 @@
 
 import UIKit
 
-class EditingStyleChangeTextField: UITextField, UITextFieldDelegate {
+class SectionNameTextField: UITextField, UITextFieldDelegate {
     
-    override func awakeFromNib() {
+    override func draw(_ rect: CGRect) {
         self.delegate = self
         self.borderStyle = .none
-        
-        // Keyboard Setting
         self.returnKeyType = .done
-    }
-    
-    /// テキストフィールド入力状態後
-    ///
-    /// - Parameter textField: 対象のテキストフィールド
+        self.adjustsFontSizeToFitWidth = true
+        self.minimumFontSize = 8
+     }
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("テキストフィールド入力状態後")
-        self.borderStyle = .roundedRect
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.black.cgColor
         self.backgroundColor = .white
     }
     
-    /// リターンキー入力時
-    ///
-    /// - Parameter textField: 対象のテキストフィールド
-    /// - Returns: trueでリターン実行 falseでリターンを無視
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if self.text != "" {
+            self.layer.borderColor = UIColor.black.cgColor
+        }
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("リターン入力時")
-        // キーボードを閉じる
         textField.resignFirstResponder()
         return true
     }
     
-    /// フォーカスが外れる前
-    ///
-    /// - Parameter textField: 対象のテキストフィールド
-    /// - Returns: trueでフォーカスを外す falseでフォーカスを外さない
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        print("フォーカスが外れる前")
-        if(self.text == ""){
-            self.backgroundColor = .red
+        if self.text == "" {
+            self.layer.borderColor = UIColor.red.cgColor
             return false
         }
         else{
             //UserDefaultsの登録を上書き
-            //UserDefaults Instance
             let userDefaults: UserDefaults = UserDefaults.standard
             switch tag {
             case 0:
@@ -64,30 +56,15 @@ class EditingStyleChangeTextField: UITextField, UITextFieldDelegate {
             default:
                 break
             }
-
         return true
         }
     }
     
-    /// フォーカスが外れた後
-    ///
-    /// - Parameter textField: 対象のテキストフィールド
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("フォーカスが外れた後")
-        self.borderStyle = .none
+        self.layer.borderWidth = 0
         self.backgroundColor = .clear
     }
     
     //範囲外タップでキーボードを下げる
     //→viewcontrollerで実装
-    
-    
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
 }

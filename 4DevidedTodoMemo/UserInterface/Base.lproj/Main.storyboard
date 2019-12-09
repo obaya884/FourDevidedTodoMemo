@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,14 +29,18 @@
                                                         <rect key="frame" x="8" y="8" width="171.5" height="270"/>
                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生活" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-4T-Pbh" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="生活" borderStyle="roundedRect" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="J6F-4T-Pbh" customClass="SectionNameTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="282" width="88" height="39.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="r7h-6Q-2Lz"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.55294117647058827" blue="0.38431372549019605" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="J6F-4T-Pbh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZYX-vH-Z4y" secondAttribute="leading" constant="30" id="8wx-eD-61o"/>
                                                     <constraint firstItem="lNi-EP-Azd" firstAttribute="leading" secondItem="ZYX-vH-Z4y" secondAttribute="leading" constant="8" id="JvJ-Ak-KbP"/>
                                                     <constraint firstAttribute="bottom" secondItem="J6F-4T-Pbh" secondAttribute="bottom" constant="10" id="OMk-Cs-YQL"/>
                                                     <constraint firstItem="lNi-EP-Azd" firstAttribute="top" secondItem="ZYX-vH-Z4y" secondAttribute="top" constant="8" id="PRU-rn-5yu"/>
@@ -43,6 +48,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="lNi-EP-Azd" secondAttribute="trailing" constant="8" id="kbZ-7k-b6A"/>
                                                     <constraint firstItem="J6F-4T-Pbh" firstAttribute="centerX" secondItem="ZYX-vH-Z4y" secondAttribute="centerX" id="q1O-GP-qVN"/>
                                                     <constraint firstItem="J6F-4T-Pbh" firstAttribute="top" secondItem="lNi-EP-Azd" secondAttribute="bottom" constant="4" id="yUI-pf-70x"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6F-4T-Pbh" secondAttribute="trailing" constant="30" id="zpg-Pz-CkE"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-aJ-EJV" userLabel="TopRightView">
@@ -52,8 +58,11 @@
                                                         <rect key="frame" x="8" y="8" width="171.5" height="270"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
-                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="仕事" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-Fv-ue4" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="仕事" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-Fv-ue4" customClass="SectionNameTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="282" width="88" height="39.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="tiC-eV-EcE"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -64,6 +73,8 @@
                                                     <constraint firstItem="fOw-Fv-ue4" firstAttribute="top" secondItem="nLl-x7-UuX" secondAttribute="bottom" constant="4" id="DUj-Vn-qX6"/>
                                                     <constraint firstItem="nLl-x7-UuX" firstAttribute="top" secondItem="UAg-aJ-EJV" secondAttribute="top" constant="8" id="EPq-sS-gkh"/>
                                                     <constraint firstItem="fOw-Fv-ue4" firstAttribute="centerX" secondItem="UAg-aJ-EJV" secondAttribute="centerX" id="IS2-GU-OZR"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fOw-Fv-ue4" secondAttribute="trailing" constant="30" id="Rf9-rT-5d3"/>
+                                                    <constraint firstItem="fOw-Fv-ue4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UAg-aJ-EJV" secondAttribute="leading" constant="30" id="gC1-l7-6xe"/>
                                                     <constraint firstItem="nLl-x7-UuX" firstAttribute="centerX" secondItem="UAg-aJ-EJV" secondAttribute="centerX" id="nMx-ry-wTd"/>
                                                     <constraint firstAttribute="trailing" secondItem="nLl-x7-UuX" secondAttribute="trailing" constant="8" id="o8t-pl-HYE"/>
                                                     <constraint firstItem="nLl-x7-UuX" firstAttribute="leading" secondItem="UAg-aJ-EJV" secondAttribute="leading" constant="8" id="tbb-lL-8xu"/>
@@ -81,8 +92,11 @@
                                                         <rect key="frame" x="8" y="53.5" width="171.5" height="270"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
-                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="成長" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-tT-LaY" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="成長" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-tT-LaY" customClass="SectionNameTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="10" width="88" height="39.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="qtS-uK-ciA"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -91,10 +105,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="JF6-Di-Z5D" secondAttribute="bottom" constant="8" id="7r4-Nl-1ze"/>
                                                     <constraint firstItem="JF6-Di-Z5D" firstAttribute="centerX" secondItem="Kia-7U-q2A" secondAttribute="centerX" id="EUJ-EN-uGB"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zAf-tT-LaY" secondAttribute="trailing" constant="30" id="GuM-8O-xJh"/>
                                                     <constraint firstItem="zAf-tT-LaY" firstAttribute="top" secondItem="Kia-7U-q2A" secondAttribute="top" constant="10" id="Qn4-YV-Qes"/>
                                                     <constraint firstItem="zAf-tT-LaY" firstAttribute="centerX" secondItem="Kia-7U-q2A" secondAttribute="centerX" id="RvN-LZ-0l9"/>
                                                     <constraint firstItem="JF6-Di-Z5D" firstAttribute="leading" secondItem="Kia-7U-q2A" secondAttribute="leading" constant="8" id="TeQ-PA-5c4"/>
                                                     <constraint firstItem="JF6-Di-Z5D" firstAttribute="top" secondItem="zAf-tT-LaY" secondAttribute="bottom" constant="4" id="bVi-mE-4bw"/>
+                                                    <constraint firstItem="zAf-tT-LaY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kia-7U-q2A" secondAttribute="leading" constant="30" id="nvx-yD-J4E"/>
                                                     <constraint firstAttribute="trailing" secondItem="JF6-Di-Z5D" secondAttribute="trailing" constant="8" id="u0f-7i-Pg8"/>
                                                 </constraints>
                                             </view>
@@ -105,8 +121,11 @@
                                                         <rect key="frame" x="8" y="53.5" width="171.5" height="270"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
-                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="趣味" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-Ou-ZvY" customClass="EditingStyleChangeTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="趣味" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-Ou-ZvY" customClass="SectionNameTextField" customModule="_DevidedTodoMemo" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="10" width="88" height="39.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="24P-48-ZmR"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -115,11 +134,13 @@
                                                 <constraints>
                                                     <constraint firstItem="ADV-Oh-r08" firstAttribute="centerX" secondItem="ocj-No-Aap" secondAttribute="centerX" id="0BZ-fs-Qbk"/>
                                                     <constraint firstItem="bQx-Ou-ZvY" firstAttribute="top" secondItem="ocj-No-Aap" secondAttribute="top" constant="10" id="6qk-Kq-Mqf"/>
+                                                    <constraint firstItem="bQx-Ou-ZvY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ocj-No-Aap" secondAttribute="leading" constant="30" id="Quh-7R-SdI"/>
                                                     <constraint firstItem="bQx-Ou-ZvY" firstAttribute="centerX" secondItem="ocj-No-Aap" secondAttribute="centerX" id="U2G-BP-EJ8"/>
                                                     <constraint firstItem="ADV-Oh-r08" firstAttribute="leading" secondItem="ocj-No-Aap" secondAttribute="leading" constant="8" id="bpk-bJ-WLP"/>
                                                     <constraint firstAttribute="trailing" secondItem="ADV-Oh-r08" secondAttribute="trailing" constant="8" id="bvg-UD-1rQ"/>
                                                     <constraint firstAttribute="bottom" secondItem="ADV-Oh-r08" secondAttribute="bottom" constant="8" id="o8s-49-lgZ"/>
                                                     <constraint firstItem="ADV-Oh-r08" firstAttribute="top" secondItem="bQx-Ou-ZvY" secondAttribute="bottom" constant="4" id="roW-Bk-EFN"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bQx-Ou-ZvY" secondAttribute="trailing" constant="30" id="ulS-gj-8rk"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
