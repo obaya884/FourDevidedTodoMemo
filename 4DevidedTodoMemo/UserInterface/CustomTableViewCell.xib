@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="_DevidedTodoMemo" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Tetra" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="172" height="44"/>
@@ -25,7 +25,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUV-vz-MDu">
-                        <rect key="frame" x="39" y="9.5" width="133" height="25"/>
+                        <rect key="frame" x="39" y="0.0" width="133" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="iK1-aF-LYO"/>
                         </constraints>
@@ -41,6 +41,8 @@
                     <constraint firstItem="WUV-vz-MDu" firstAttribute="leading" secondItem="xt9-uM-qR5" secondAttribute="trailing" constant="8" id="HLe-d1-gGZ"/>
                     <constraint firstItem="WUV-vz-MDu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IpY-fo-Nbh"/>
                     <constraint firstItem="xt9-uM-qR5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KRx-OO-m1z"/>
+                    <constraint firstItem="WUV-vz-MDu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mUM-dG-dze"/>
+                    <constraint firstAttribute="bottom" secondItem="WUV-vz-MDu" secondAttribute="bottom" id="tHj-Qz-rQA"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
