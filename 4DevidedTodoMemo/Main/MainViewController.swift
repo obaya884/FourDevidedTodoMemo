@@ -10,7 +10,12 @@ import UIKit
 import LTHRadioButton
 import PopupDialog
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class MainViewController: UIViewController{
+    
+    private var presenter: MainPresenterInput!
+    func inject(presenter: MainPresenterInput) {
+        self.presenter = presenter
+    }
     
     //MARK:- Initialization
     //アウトレット変数
@@ -41,7 +46,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK:- Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         //TableViewのdelegateとdatasource設定
         topLeftSectionTableView.dataSource = self
         topLeftSectionTableView.delegate = self
@@ -86,19 +90,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.bottomLeftSectionNameTextField.text = userDefaults.object(forKey: "bottomLeftSectionName") as? String
         self.bottomRightSectionNameTextField.text = userDefaults.object(forKey: "bottomRightSectionName") as? String
         
-        //itemNameArrayに値を取得
+        
+        // TODO: ウォークスルーの実現検討
         //初期値の設定（チュートリアル説明用）
-        userDefaults.register(defaults:
-            ["topLeftSectionItemName": ["Tetraへようこそ！", "中央のプラスボタンから", "TODOを追加できます"],
-             "topRightSectionItemName": ["←のボックスをタップすると", "TODOを消すことができます"],
-             "bottomLeftSectionItemName": ["TetraではTODOを", "4つの領域に分類します"],
-             "bottomRightSectionItemName": ["領域の名前をタップすると", "領域名を変更できます", "それではTetraをお楽しみください！"]
-            ])
+//        userDefaults.register(defaults:
+//            ["topLeftSectionItemName": ["Tetraへようこそ！", "中央のプラスボタンから", "TODOを追加できます"],
+//             "topRightSectionItemName": ["←のボックスをタップすると", "TODOを消すことができます"],
+//             "bottomLeftSectionItemName": ["TetraではTODOを", "4つの領域に分類します"],
+//             "bottomRightSectionItemName": ["領域の名前をタップすると", "領域名を変更できます", "それではTetraをお楽しみください！"]
+//            ])
+
+        //itemNameArrayに値を取得
         //UserDefaultsから値の読み出し
-        topLeftSectionItemNameArray = userDefaults.array(forKey: "topLeftSectionItemName") as! [String]
-        topRightSectionItemNameArray = userDefaults.array(forKey: "topRightSectionItemName") as! [String]
-        bottomLeftSectionItemNameArray = userDefaults.array(forKey: "bottomLeftSectionItemName") as! [String]
-        bottomRightSectionItemNameArray = userDefaults.array(forKey: "bottomRightSectionItemName") as! [String]
+        topLeftSectionItemNameArray = userDefaults.array(forKey: "topLeftSectionItemName") as? [String] ?? []
+        topRightSectionItemNameArray = userDefaults.array(forKey: "topRightSectionItemName") as? [String] ?? []
+        bottomLeftSectionItemNameArray = userDefaults.array(forKey: "bottomLeftSectionItemName") as? [String] ?? []
+        bottomRightSectionItemNameArray = userDefaults.array(forKey: "bottomRightSectionItemName") as? [String] ?? []
         
         //全データ配列作成
         generateItemNameDataArrays()
@@ -152,9 +159,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.view.endEditing(true)
     }
     
-    // MARK:- TableView Settings
     // tableviewの処理を分岐するメソッド
-    func checkTableView(_ tableView: UITableView) -> Void{
+    func checkTableView(_ tableView: UITableView) -> Int{
         if (tableView.isEqual(topLeftSectionTableView)) {
             tag = 0
         }
@@ -167,33 +173,48 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if (tableView.isEqual(bottomRightSectionTableView)){
             tag = 3
         }
+        return tag
     }
-    
+}
+
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        checkTableView(tableView)
-        return itemNameDataArrays[tag].count
+        switch checkTableView(tableView) {
+        case 0:
+            return presenter.topLeftNumberOfItems
+        case 1:
+            return presenter.topRightNumberOfItems
+        case 2:
+            return presenter.bottomLeftNumberOfItems
+        case 3:
+            return presenter.bottomRightNumberOfItems
+        default:
+            return 0
+        }
     }
-    
+
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         tableView.estimatedRowHeight = 44
         return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        checkTableView(tableView)
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell
-        
-        cell.taskLabel.text = itemNameDataArrays[tag][indexPath.row]
-        
-        //cell選択時のハイライト解除
-        cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        
-        //cellのdelegate実装先の設定
+
+        //cellのRadioButtonDelegate実装先の設定
         cell.delegate = self
         
+        if let item = presenter.item(forRow: indexPath.row, tag: checkTableView(tableView)) {
+            cell.configure(item: item)
+        }
+
         return cell
     }
+    
+}
+
+extension MainViewController: UITableViewDelegate {
+    
 }
 
 // MARK: RadioButtonDelegate
@@ -346,4 +367,8 @@ extension MainViewController: AddButtonDelegate{
             }
         }
     }
+}
+
+extension MainViewController: MainPresenterOutput {
+    
 }
