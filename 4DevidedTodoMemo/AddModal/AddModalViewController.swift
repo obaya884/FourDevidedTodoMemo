@@ -12,7 +12,12 @@ protocol AddButtonDelegate {
     func afterPushModalViewAddButton(sectionTag: Int, content: String)
 }
 
-class ModalViewController: UIViewController {
+class AddModalViewController: UIViewController {
+    
+    private var presenter: AddModalPresenterInput!
+    func inject(presenter: AddModalPresenterInput) {
+        self.presenter = presenter
+    }
     
     var sectionNameArray: [String] = []
     var delegate: AddButtonDelegate?
@@ -108,7 +113,8 @@ class ModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-            self.delegate?.afterPushModalViewAddButton(sectionTag: sectionTag, content: content)
+//            self.delegate?.afterPushModalViewAddButton(sectionTag: sectionTag, content: content)
+            presenter.addItem(sectionIndex: sectionTag, content: content)
           
             resetTextFieldState()
             self.dismiss(animated: true, completion: nil)
@@ -116,7 +122,15 @@ class ModalViewController: UIViewController {
     }
 }
 
-extension ModalViewController: UITextFieldDelegate {
+extension AddModalViewController: AddModalPresenterOutput {
+    func dismissDialog() {
+        
+    }
+    
+    
+}
+
+extension AddModalViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if(self.sectionTextField.text == ""){
@@ -150,7 +164,7 @@ extension ModalViewController: UITextFieldDelegate {
 }
 
 // MARK:- PickerView Settings
-extension ModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

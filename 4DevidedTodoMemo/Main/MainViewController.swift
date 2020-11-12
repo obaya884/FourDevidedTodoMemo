@@ -23,15 +23,13 @@ class MainViewController: UIViewController{
     @IBOutlet var topRightSectionNameTextField: UITextField!
     @IBOutlet var bottomLeftSectionNameTextField: UITextField!
     @IBOutlet var bottomRightSectionNameTextField: UITextField!
-        
+    
     @IBOutlet var topLeftSectionTableView: UITableView!
     @IBOutlet var topRightSectionTableView: UITableView!
     @IBOutlet var bottomLeftSectionTableView: UITableView!
     @IBOutlet var bottomRightSectionTableView: UITableView!
     
     //変数
-    // モーダルビューのインスタンス
-    let modalView = ModalViewController(nibName: "ModalViewController", bundle: nil)
     
     //制御用
     var tag: Int = 0
@@ -42,7 +40,7 @@ class MainViewController: UIViewController{
     var topRightSectionItemNameArray: [String] = []
     var bottomLeftSectionItemNameArray: [String] = []
     var bottomRightSectionItemNameArray: [String] = []
-        
+    
     //MARK:- Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +54,6 @@ class MainViewController: UIViewController{
         bottomRightSectionTableView.dataSource = self
         bottomRightSectionTableView.delegate = self
         
-        //ModalViewのdelegate設定
-        modalView.delegate = self
-        
         //UserDefaultのインスタンス生成
         let userDefaults: UserDefaults = UserDefaults.standard
         
@@ -67,7 +62,7 @@ class MainViewController: UIViewController{
         self.topRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.bottomLeftSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.bottomRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
-
+        
         topLeftSectionTableView.estimatedRowHeight = 44
         topRightSectionTableView.estimatedRowHeight = 44
         bottomLeftSectionTableView.estimatedRowHeight = 44
@@ -93,23 +88,12 @@ class MainViewController: UIViewController{
         
         // TODO: ウォークスルーの実現検討
         //初期値の設定（チュートリアル説明用）
-//        userDefaults.register(defaults:
-//            ["topLeftSectionItemName": ["Tetraへようこそ！", "中央のプラスボタンから", "TODOを追加できます"],
-//             "topRightSectionItemName": ["←のボックスをタップすると", "TODOを消すことができます"],
-//             "bottomLeftSectionItemName": ["TetraではTODOを", "4つの領域に分類します"],
-//             "bottomRightSectionItemName": ["領域の名前をタップすると", "領域名を変更できます", "それではTetraをお楽しみください！"]
-//            ])
-
-        //itemNameArrayに値を取得
-        //UserDefaultsから値の読み出し
-        topLeftSectionItemNameArray = userDefaults.array(forKey: "topLeftSectionItemName") as? [String] ?? []
-        topRightSectionItemNameArray = userDefaults.array(forKey: "topRightSectionItemName") as? [String] ?? []
-        bottomLeftSectionItemNameArray = userDefaults.array(forKey: "bottomLeftSectionItemName") as? [String] ?? []
-        bottomRightSectionItemNameArray = userDefaults.array(forKey: "bottomRightSectionItemName") as? [String] ?? []
-        
-        //全データ配列作成
-        generateItemNameDataArrays()
-        
+        //        userDefaults.register(defaults:
+        //            ["topLeftSectionItemName": ["Tetraへようこそ！", "中央のプラスボタンから", "TODOを追加できます"],
+        //             "topRightSectionItemName": ["←のボックスをタップすると", "TODOを消すことができます"],
+        //             "bottomLeftSectionItemName": ["TetraではTODOを", "4つの領域に分類します"],
+        //             "bottomRightSectionItemName": ["領域の名前をタップすると", "領域名を変更できます", "それではTetraをお楽しみください！"]
+        //            ])
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,27 +105,8 @@ class MainViewController: UIViewController{
     }
     
     //タスク追加ボタン押下時のメソッド(PopupDialogを用いたモーダル表示）
-    @IBAction func pushPlusButton(){
-        
-        //モーダル外のオーバーレイ表示の設定
-        let overlayAppearance = PopupDialogOverlayView.appearance()
-        overlayAppearance.color           = .white
-        overlayAppearance.blurRadius      = 5
-        overlayAppearance.blurEnabled     = true
-        overlayAppearance.liveBlurEnabled = false
-        overlayAppearance.opacity         = 0.2
-        
-        // 表示したいビューコントローラーを指定してポップアップを作る
-        let popup = PopupDialog(viewController: modalView, transitionStyle: .zoomIn)
-        
-        // SectionNameが全て存在している状態であれば作成したポップアップを表示する
-        if ( topLeftSectionNameTextField.text != "" &&
-             topRightSectionNameTextField.text != "" &&
-             bottomLeftSectionNameTextField.text != "" &&
-             bottomRightSectionNameTextField.text != "") {
-                self.view.endEditing(true)
-                present(popup, animated: true, completion: nil)
-        }
+    @IBAction func tapPlusButton(){
+        presenter.transitionToAddModal()
     }
     
     //データ配列の作成メソッド
@@ -155,8 +120,8 @@ class MainViewController: UIViewController{
     
     //画面外をタッチした時にキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            //どのtextfield編集に対しても閉じれるようにviewに対してendEditngする
-            self.view.endEditing(true)
+        //どのtextfield編集に対しても閉じれるようにviewに対してendEditngする
+        self.view.endEditing(true)
     }
     
     // tableviewの処理を分岐するメソッド
@@ -192,7 +157,7 @@ extension MainViewController: UITableViewDataSource {
             return 0
         }
     }
-
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         tableView.estimatedRowHeight = 44
         return UITableView.automaticDimension
@@ -200,20 +165,57 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell
-
+        
         //cellのRadioButtonDelegate実装先の設定
         cell.delegate = self
         
         if let item = presenter.item(forRow: indexPath.row, tag: checkTableView(tableView)) {
             cell.configure(item: item)
         }
-
+        
         return cell
     }
     
 }
 
 extension MainViewController: UITableViewDelegate {
+    
+}
+
+extension MainViewController: MainPresenterOutput {
+    func updateItems() {
+        topLeftSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+        topRightSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+        bottomLeftSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+        bottomRightSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+    }
+    
+    func popUpAddDialog() {
+        let addModal = AddModalViewController(nibName: "ModalViewController", bundle: nil)
+        let model = ItemModel()
+        let addModalPresenter = AddModalPresenter(view: addModal, model: model)
+        addModal.inject(presenter: addModalPresenter)
+                
+        //モーダル外のオーバーレイ表示の設定
+        let overlayAppearance = PopupDialogOverlayView.appearance()
+        overlayAppearance.color           = .white
+        overlayAppearance.blurRadius      = 5
+        overlayAppearance.blurEnabled     = true
+        overlayAppearance.liveBlurEnabled = false
+        overlayAppearance.opacity         = 0.2
+        
+        // 表示したいビューコントローラーを指定してポップアップを作る
+        let popup = PopupDialog(viewController: addModal, transitionStyle: .zoomIn)
+        
+        // SectionNameが全て存在している状態であれば作成したポップアップを表示する
+        if ( topLeftSectionNameTextField.text != "" &&
+                topRightSectionNameTextField.text != "" &&
+                bottomLeftSectionNameTextField.text != "" &&
+                bottomRightSectionNameTextField.text != "") {
+            self.view.endEditing(true)
+            present(popup, animated: true, completion: nil)
+        }
+    }
     
 }
 
@@ -252,16 +254,16 @@ extension MainViewController: RadioButtonDelegate{
             
             //1次データの削除
             self.topRightSectionItemNameArray.remove(at: indexPath!.row)
-                        
+            
             //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
             generateItemNameDataArrays()
-
+            
             //UserDefaultsの保存情報にも変更を反映
             userDefaults.removeObject(forKey: "topRightSectionItemName")
             userDefaults.set(topRightSectionItemNameArray, forKey: "topRightSectionItemName")
-
+            
             //tableviewの操作
             self.topRightSectionTableView.beginUpdates()
             self.topRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
@@ -272,7 +274,7 @@ extension MainViewController: RadioButtonDelegate{
             
             //1次データの削除
             self.bottomLeftSectionItemNameArray.remove(at: indexPath!.row)
-
+            
             //2次データ再生成
             //numberOfRowsInSectionではここを見てるから
             //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
@@ -310,65 +312,3 @@ extension MainViewController: RadioButtonDelegate{
     }
 }
 
-//MARK: AddButtonDelegate
-extension MainViewController: AddButtonDelegate{
-    func afterPushModalViewAddButton(sectionTag: Int, content: String) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-            
-            let userDefaults: UserDefaults = UserDefaults.standard
-            
-            switch sectionTag {
-            case 0:
-                self.topLeftSectionItemNameArray.insert(content, at: 0)
-                self.generateItemNameDataArrays()
-                self.topLeftSectionTableView.beginUpdates()
-                self.topLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                self.topLeftSectionTableView.endUpdates()
-                self.topLeftSectionTableView.flashScrollIndicators()
-                //UserDefaultsの保存情報にも変更を反映
-                userDefaults.removeObject(forKey: "topLeftSectionItemName")
-                userDefaults.set(self.topLeftSectionItemNameArray, forKey: "topLeftSectionItemName")
-                
-            case 1:
-                self.topRightSectionItemNameArray.insert(content, at: 0)
-                self.generateItemNameDataArrays()
-                self.topRightSectionTableView.beginUpdates()
-                self.topRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                self.topRightSectionTableView.endUpdates()
-                self.topRightSectionTableView.flashScrollIndicators()
-                //UserDefaultsの保存情報にも変更を反映
-                userDefaults.removeObject(forKey: "topRightSectionItemName")
-                userDefaults.set(self.topRightSectionItemNameArray, forKey: "topRightSectionItemName")
-                
-            case 2:
-                self.bottomLeftSectionItemNameArray.insert(content, at: 0)
-                self.generateItemNameDataArrays()
-                self.bottomLeftSectionTableView.beginUpdates()
-                self.bottomLeftSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                self.bottomLeftSectionTableView.endUpdates()
-                self.bottomLeftSectionTableView.flashScrollIndicators()
-                //UserDefaultsの保存情報にも変更を反映
-                userDefaults.removeObject(forKey: "bottomLeftSectionItemName")
-                userDefaults.set(self.bottomLeftSectionItemNameArray, forKey: "bottomLeftSectionItemName")
-                
-            case 3:
-                self.bottomRightSectionItemNameArray.insert(content, at: 0)
-                self.generateItemNameDataArrays()
-                self.bottomRightSectionTableView.beginUpdates()
-                self.bottomRightSectionTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                self.bottomRightSectionTableView.endUpdates()
-                self.bottomRightSectionTableView.flashScrollIndicators()
-                //UserDefaultsの保存情報にも変更を反映
-                userDefaults.removeObject(forKey: "bottomRightSectionItemName")
-                userDefaults.set(self.bottomRightSectionItemNameArray, forKey: "bottomRightSectionItemName")
-                
-            default:
-                break
-            }
-        }
-    }
-}
-
-extension MainViewController: MainPresenterOutput {
-    
-}

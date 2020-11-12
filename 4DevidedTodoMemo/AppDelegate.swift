@@ -17,10 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+//        let appDomain = Bundle.main.bundleIdentifier
+//        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+        
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainViewController
-        let model = MainModel()
-        let presenter = MainPresenter(view: mainViewController, model: model)
-        mainViewController.inject(presenter: presenter)
+        let model = ItemModel()
+        let mainPresenter = MainPresenter(view: mainViewController, model: model)
+        mainViewController.inject(presenter: mainPresenter)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainViewController
