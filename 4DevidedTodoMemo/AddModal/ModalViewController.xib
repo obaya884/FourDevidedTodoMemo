@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalViewController" customModule="_DevidedTodoMemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddModalViewController" customModule="Tetra" customModuleProvider="target">
             <connections>
                 <outlet property="contentTextField" destination="R0d-nl-oOW" id="ZWm-9z-udg"/>
                 <outlet property="sectionTextField" destination="ei0-ds-mjC" id="eL7-Sf-gov"/>
@@ -50,7 +49,7 @@
                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTS-Gq-4Zg" customClass="IBDesignableButton" customModule="_DevidedTodoMemo" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTS-Gq-4Zg" customClass="IBDesignableButton" customModule="Tetra" customModuleProvider="target">
                     <rect key="frame" x="104" y="216" width="132" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.55294117649999996" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,6 +73,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="aEZ-KK-foI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4hr-In-FnI"/>
@@ -82,8 +82,12 @@
                 <constraint firstItem="aEZ-KK-foI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rSp-iu-XHH"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
         </view>
     </objects>
+    <designables>
+        <designable name="xTS-Gq-4Zg">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+    </designables>
 </document>

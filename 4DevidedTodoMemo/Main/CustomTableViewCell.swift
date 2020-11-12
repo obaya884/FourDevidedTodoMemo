@@ -22,7 +22,6 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         radioButton.selectedColor = UIColor(hex: "FF8D3F")
         
         radioButton.onSelect { [unowned self] in
@@ -36,6 +35,13 @@ class CustomTableViewCell: UITableViewCell {
         }
         
         radioButton.onDeselect{}
+    }
+    
+    func configure(item: String) {
+        taskLabel.text = item
+
+        //cell選択時のハイライト解除
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
     }
     
 }
