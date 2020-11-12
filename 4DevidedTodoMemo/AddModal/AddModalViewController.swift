@@ -79,14 +79,14 @@ class AddModalViewController: UIViewController {
             let content: String = self.contentTextField.text!
             presenter.addItem(sectionIndex: sectionTag, content: content)
           
-            self.dismiss(animated: true, completion: nil)
+            self.dismissDialog()
         }
     }
 }
 
 extension AddModalViewController: AddModalPresenterOutput {
     func dismissDialog() {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -37,10 +37,7 @@ class MainViewController: UIViewController{
         topRightSectionTableView.dataSource = self
         bottomLeftSectionTableView.dataSource = self
         bottomRightSectionTableView.dataSource = self
-        
-        //UserDefaultのインスタンス生成
-        let userDefaults: UserDefaults = UserDefaults.standard
-        
+                
         //TableViewのカスタムセル登録
         self.topLeftSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.topRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")

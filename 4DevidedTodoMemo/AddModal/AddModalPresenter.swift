@@ -41,7 +41,6 @@ final class AddModalPresenter: AddModalPresenterInput {
         return sectionNames[index]
     }
 
-
     func addItem(sectionIndex: Int, content: String) {
         model.addItem(tag: sectionIndex, content: content, completion: model.notify)
     }

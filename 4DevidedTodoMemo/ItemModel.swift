@@ -45,7 +45,7 @@ final class ItemModel: ItemModelInput {
         var sectionNames: [String] = []
         sectionNames.append(userDefaults.object(forKey: "topLeftSectionName") as? String ?? "")
         sectionNames.append(userDefaults.object(forKey: "topRightSectionName") as? String ?? "")
-        sectionNames.append(userDefaults.object(forKey: "botoomLeftSectionName") as? String ?? "")
+        sectionNames.append(userDefaults.object(forKey: "bottomLeftSectionName") as? String ?? "")
         sectionNames.append(userDefaults.object(forKey: "bottomRightSectionName") as? String ?? "")
         return sectionNames
     }
