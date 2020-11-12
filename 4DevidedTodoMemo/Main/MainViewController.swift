@@ -29,13 +29,6 @@ class MainViewController: UIViewController{
     @IBOutlet var bottomLeftSectionTableView: UITableView!
     @IBOutlet var bottomRightSectionTableView: UITableView!
     
-    //項目名用
-    var itemNameDataArrays: [[String]] = []
-    var topLeftSectionItemNameArray: [String] = []
-    var topRightSectionItemNameArray: [String] = []
-    var bottomLeftSectionItemNameArray: [String] = []
-    var bottomRightSectionItemNameArray: [String] = []
-    
     //MARK:- Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +37,7 @@ class MainViewController: UIViewController{
         topRightSectionTableView.dataSource = self
         bottomLeftSectionTableView.dataSource = self
         bottomRightSectionTableView.dataSource = self
-        
+        
         //UserDefaultのインスタンス生成
         let userDefaults: UserDefaults = UserDefaults.standard
         
@@ -65,18 +58,11 @@ class MainViewController: UIViewController{
         bottomRightSectionTableView.rowHeight = UITableView.automaticDimension
         
         //SectionNameTextFieldの値を取得
-        //初期値を設定(ユーザーが変更してない場合はこれが取り出される)
-        userDefaults.register(defaults: ["topLeftSectionName": "生活",
-                                         "topRightSectionName": "仕事",
-                                         "bottomLeftSectionName": "趣味",
-                                         "bottomRightSectionName": "臨時"])
-        //UserDefaultから値の読み出し、TextFieldに反映
-        self.topLeftSectionNameTextField.text = userDefaults.object(forKey: "topLeftSectionName") as? String
-        self.topRightSectionNameTextField.text = userDefaults.object(forKey: "topRightSectionName") as? String
-        self.bottomLeftSectionNameTextField.text = userDefaults.object(forKey: "bottomLeftSectionName") as? String
-        self.bottomRightSectionNameTextField.text = userDefaults.object(forKey: "bottomRightSectionName") as? String
-        
-        
+        self.topLeftSectionNameTextField.text = presenter.topLeftSectionName
+        self.topRightSectionNameTextField.text = presenter.topRightSectionName
+        self.bottomLeftSectionNameTextField.text = presenter.bottomLeftSectionName
+        self.bottomRightSectionNameTextField.text = presenter.bottomRightSectionName
+    
         // TODO: ウォークスルーの実現検討
         //初期値の設定（チュートリアル説明用）
         //        userDefaults.register(defaults:

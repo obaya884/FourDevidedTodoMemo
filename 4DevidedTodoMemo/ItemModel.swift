@@ -10,6 +10,7 @@ import Foundation
 
 protocol ItemModelInput {
     func fetchSectionName(tag: Int) -> String
+    func fetchSectionNames() -> [String]
     func fetchItems(tag: Int) -> [String]
     func addItem(tag: Int, content: String, completion: @escaping () -> Void)
     func editItem(tag: Int, index: Int, content: String)
@@ -38,6 +39,15 @@ final class ItemModel: ItemModelInput {
     
     func removeObserber(_ observer: Any) {
         NotificationCenter.default.removeObserver(observer)
+    }
+    
+    func fetchSectionNames() -> [String] {
+        var sectionNames: [String] = []
+        sectionNames.append(userDefaults.object(forKey: "topLeftSectionName") as? String ?? "")
+        sectionNames.append(userDefaults.object(forKey: "topRightSectionName") as? String ?? "")
+        sectionNames.append(userDefaults.object(forKey: "botoomLeftSectionName") as? String ?? "")
+        sectionNames.append(userDefaults.object(forKey: "bottomRightSectionName") as? String ?? "")
+        return sectionNames
     }
     
     func fetchSectionName(tag: Int) -> String {

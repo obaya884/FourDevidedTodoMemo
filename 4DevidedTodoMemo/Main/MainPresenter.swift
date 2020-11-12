@@ -14,6 +14,11 @@ protocol MainPresenterInput {
     var bottomLeftNumberOfItems: Int{get}
     var bottomRightNumberOfItems: Int{get}
     
+    var topLeftSectionName: String{get}
+    var topRightSectionName: String{get}
+    var bottomLeftSectionName: String{get}
+    var bottomRightSectionName: String{get}
+    
     func item(forRow row: Int, tag: Int) -> String?
     func didSelectRow(at indexPath: IndexPath)
     func onSelectRadioButton(sectionTag: Int, itemIndex: Int)
@@ -33,6 +38,11 @@ final class MainPresenter: MainPresenterInput {
     private(set) var bottomLeftItems: [String] = []
     private(set) var bottomRightItems: [String] = []
     
+    private(set) var topLeftSectionName: String = ""
+    private(set) var topRightSectionName: String = ""
+    private(set) var bottomLeftSectionName: String = ""
+    private(set) var bottomRightSectionName: String = ""
+
     private weak var view: MainPresenterOutput!
     private var model: ItemModelInput
     
@@ -43,6 +53,7 @@ final class MainPresenter: MainPresenterInput {
         model.addObserver(self, selector: #selector(self.receiveNotify))
         
         fetchAllItems()
+        fetchAllSectionName()
     }
     
     func fetchAllItems() {
@@ -50,6 +61,13 @@ final class MainPresenter: MainPresenterInput {
         topRightItems = model.fetchItems(tag: 1)
         bottomLeftItems = model.fetchItems(tag: 2)
         bottomRightItems = model.fetchItems(tag: 3)
+    }
+    
+    func fetchAllSectionName() {
+        topLeftSectionName = model.fetchSectionName(tag: 0)
+        topRightSectionName = model.fetchSectionName(tag: 1)
+        bottomLeftSectionName = model.fetchSectionName(tag: 2)
+        bottomRightSectionName = model.fetchSectionName(tag: 3)
     }
     
     @objc func receiveNotify() {

@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let appDomain = Bundle.main.bundleIdentifier
 //        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
         
+        //セクション名に初期値を設定(ユーザーが変更してない場合はこれが取り出される)
+        UserDefaults.standard.register(defaults: ["topLeftSectionName": "生活",
+                                         "topRightSectionName": "仕事",
+                                         "bottomLeftSectionName": "趣味",
+                                         "bottomRightSectionName": "臨時"])
+        
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainViewController
         let model = ItemModel()
         let mainPresenter = MainPresenter(view: mainViewController, model: model)

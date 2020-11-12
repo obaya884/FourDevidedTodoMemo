@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol AddButtonDelegate {
-    func afterPushModalViewAddButton(sectionTag: Int, content: String)
-}
-
 class AddModalViewController: UIViewController {
     
     private var presenter: AddModalPresenterInput!
@@ -19,8 +15,6 @@ class AddModalViewController: UIViewController {
         self.presenter = presenter
     }
     
-    var sectionNameArray: [String] = []
-    var delegate: AddButtonDelegate?
     var sectionPickerView: UIPickerView = UIPickerView()
     
     @IBOutlet var sectionTextField: UITextField!
@@ -56,42 +50,12 @@ class AddModalViewController: UIViewController {
         // sectionTextField input settings
         self.sectionTextField.inputView = sectionPickerView
         self.sectionTextField.inputAccessoryView = toolbar
-        
-        // sectionPickerView Initial Setting
-        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
-    }
-    
-    func resetTextFieldState() {
-        //入力フォームのリセット
-        sectionTextField.layer.borderColor = UIColor.black.cgColor
-        contentTextField.layer.borderColor = UIColor.black.cgColor
-        self.sectionTextField.text = ""
-        self.contentTextField.text = ""
-        self.sectionPickerView.selectRow(0, inComponent: 0, animated: false)
     }
     
     @objc func done() {
         self.sectionTextField.endEditing(true)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //PickerView Title Settings
-        sectionNameArray.removeAll()
-        
-        let userDefaults: UserDefaults = UserDefaults.standard
-        sectionNameArray.append(userDefaults.object(forKey: "topLeftSectionName") as! String)
-        sectionNameArray.append(userDefaults.object(forKey: "topRightSectionName") as! String)
-        sectionNameArray.append(userDefaults.object(forKey: "bottomLeftSectionName") as! String)
-        sectionNameArray.append(userDefaults.object(forKey: "bottomRightSectionName") as! String)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        resetTextFieldState()
-    }
-    
     @IBAction func pushAddButton(){
         if (sectionTextField.text == "" && contentTextField.text == ""){
             sectionTextField.layer.borderColor = UIColor.red.cgColor
@@ -107,15 +71,14 @@ class AddModalViewController: UIViewController {
         }
         else{
             var sectionTag: Int = 0
-            for sectionName in sectionNameArray{
+            for sectionName in presenter.sectionNames{
                 if(sectionTextField.text == sectionName){
-                    sectionTag = sectionNameArray.firstIndex(of: sectionName)!
+                    sectionTag = presenter.sectionNames.firstIndex(of: sectionName)!
                 }
             }
             let content: String = self.contentTextField.text!
             presenter.addItem(sectionIndex: sectionTag, content: content)
           
-            resetTextFieldState()
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -125,15 +88,13 @@ extension AddModalViewController: AddModalPresenterOutput {
     func dismissDialog() {
         
     }
-    
-    
 }
 
 extension AddModalViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if(self.sectionTextField.text == ""){
-            self.sectionTextField.text = self.sectionNameArray[0]
+            self.sectionTextField.text = presenter.sectionName(index: 0)
         }
         return true
     }
@@ -164,21 +125,20 @@ extension AddModalViewController: UITextFieldDelegate {
 
 // MARK:- PickerView Settings
 extension AddModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return sectionNameArray.count
+        return presenter.sectionNamesOfItems
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return sectionNameArray[row]
+        return presenter.sectionName(index: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.sectionTextField.text = sectionNameArray[row]
+        self.sectionTextField.text = presenter.sectionName(index: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
