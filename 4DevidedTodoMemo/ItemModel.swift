@@ -13,7 +13,7 @@ protocol ItemModelInput {
     func fetchItems(tag: Int) -> [String]
     func addItem(tag: Int, content: String, completion: @escaping () -> Void)
     func editItem(tag: Int, index: Int, content: String)
-    func deleteItem(tag: Int, index: Int)
+    func deleteItem(tag: Int, index: Int, completion: @escaping () -> Void)
     
     func notify()
     func addObserver(_ observer: Any, selector: Selector)
@@ -101,8 +101,30 @@ final class ItemModel: ItemModelInput {
         
     }
     
-    func deleteItem(tag: Int, index: Int) {
+    func deleteItem(tag: Int, index: Int, completion: @escaping () -> Void) {
+        var keyName = ""
         
+        var items: [String]
+        switch tag {
+        case 0:
+            keyName = "topLeftSectionItemName"
+        case 1:
+            keyName = "topRightSectionItemName"
+        case 2:
+            keyName = "bottomLeftSectionItemName"
+        case 3:
+            keyName = "bottomRightSectionItemName"
+        default:
+            keyName = ""
+        }
+        items = userDefaults.array(forKey: keyName) as? [String] ?? []
+        items.remove(at: index)
+        userDefaults.set(items, forKey: keyName)
+        
+        // 描画更新通知
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            completion()
+        }
     }
     
 }

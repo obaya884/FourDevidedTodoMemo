@@ -16,6 +16,7 @@ protocol MainPresenterInput {
     
     func item(forRow row: Int, tag: Int) -> String?
     func didSelectRow(at indexPath: IndexPath)
+    func onSelectRadioButton(sectionTag: Int, itemIndex: Int)
     func transitionToAddModal()
     func receiveNotify()
 }
@@ -94,6 +95,10 @@ final class MainPresenter: MainPresenterInput {
         
         guard row < items.count else { return nil }
         return items[row]
+    }
+    
+    func onSelectRadioButton(sectionTag: Int, itemIndex: Int) {
+        model.deleteItem(tag: sectionTag, index: itemIndex, completion: model.notify)
     }
     
     func didSelectRow(at indexPath: IndexPath) {

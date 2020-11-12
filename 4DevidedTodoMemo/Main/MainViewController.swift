@@ -29,11 +29,6 @@ class MainViewController: UIViewController{
     @IBOutlet var bottomLeftSectionTableView: UITableView!
     @IBOutlet var bottomRightSectionTableView: UITableView!
     
-    //変数
-    
-    //制御用
-    var tag: Int = 0
-    
     //項目名用
     var itemNameDataArrays: [[String]] = []
     var topLeftSectionItemNameArray: [String] = []
@@ -46,14 +41,10 @@ class MainViewController: UIViewController{
         super.viewDidLoad()
         //TableViewのdelegateとdatasource設定
         topLeftSectionTableView.dataSource = self
-        topLeftSectionTableView.delegate = self
         topRightSectionTableView.dataSource = self
-        topRightSectionTableView.delegate = self
         bottomLeftSectionTableView.dataSource = self
-        bottomLeftSectionTableView.delegate = self
         bottomRightSectionTableView.dataSource = self
-        bottomRightSectionTableView.delegate = self
-        
+        
         //UserDefaultのインスタンス生成
         let userDefaults: UserDefaults = UserDefaults.standard
         
@@ -109,15 +100,6 @@ class MainViewController: UIViewController{
         presenter.transitionToAddModal()
     }
     
-    //データ配列の作成メソッド
-    func generateItemNameDataArrays(){
-        itemNameDataArrays.removeAll()
-        itemNameDataArrays.append(topLeftSectionItemNameArray)
-        itemNameDataArrays.append(topRightSectionItemNameArray)
-        itemNameDataArrays.append(bottomLeftSectionItemNameArray)
-        itemNameDataArrays.append(bottomRightSectionItemNameArray)
-    }
-    
     //画面外をタッチした時にキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //どのtextfield編集に対しても閉じれるようにviewに対してendEditngする
@@ -126,6 +108,7 @@ class MainViewController: UIViewController{
     
     // tableviewの処理を分岐するメソッド
     func checkTableView(_ tableView: UITableView) -> Int{
+        var tag: Int = 0
         if (tableView.isEqual(topLeftSectionTableView)) {
             tag = 0
         }
@@ -178,10 +161,6 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
-extension MainViewController: UITableViewDelegate {
-    
-}
-
 extension MainViewController: MainPresenterOutput {
     func updateItems() {
         topLeftSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -195,7 +174,7 @@ extension MainViewController: MainPresenterOutput {
         let model = ItemModel()
         let addModalPresenter = AddModalPresenter(view: addModal, model: model)
         addModal.inject(presenter: addModalPresenter)
-                
+        
         //モーダル外のオーバーレイ表示の設定
         let overlayAppearance = PopupDialogOverlayView.appearance()
         overlayAppearance.color           = .white
@@ -222,93 +201,10 @@ extension MainViewController: MainPresenterOutput {
 // MARK: RadioButtonDelegate
 extension MainViewController: RadioButtonDelegate{
     func onSelectRadioButton(sender: LTHRadioButton) {
-        let cell = sender.superview?.superview as? CustomTableViewCell
-        let tableview = cell?.superview as? UITableView
+        let cell = sender.superview?.superview as! CustomTableViewCell
+        let tableview = cell.superview as! UITableView
+        let selectedRowIndex = tableview.indexPath(for: cell)!.row
         
-        //UserDefaultsのインスタンス
-        let userDefaults: UserDefaults = UserDefaults.standard
-        
-        if( (tableview?.isEqual(topLeftSectionTableView))! ){
-            
-            let indexPath = self.topLeftSectionTableView.indexPath(for: cell!)
-            
-            //1次データの削除
-            self.topLeftSectionItemNameArray.remove(at: indexPath!.row)
-            
-            //2次データ再生成
-            //numberOfRowsInSectionではここを見てるから
-            //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
-            generateItemNameDataArrays()
-            
-            //UserDefaultsの保存情報にも変更を反映
-            userDefaults.removeObject(forKey: "topLeftSectionItemName")
-            userDefaults.set(topLeftSectionItemNameArray, forKey: "topLeftSectionItemName")
-            
-            //tableviewの操作
-            self.topLeftSectionTableView.beginUpdates()
-            self.topLeftSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
-            self.topLeftSectionTableView.endUpdates()
-        }
-        else if( (tableview?.isEqual(topRightSectionTableView))! ){
-            let indexPath = self.topRightSectionTableView.indexPath(for: cell!)
-            
-            //1次データの削除
-            self.topRightSectionItemNameArray.remove(at: indexPath!.row)
-            
-            //2次データ再生成
-            //numberOfRowsInSectionではここを見てるから
-            //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
-            generateItemNameDataArrays()
-            
-            //UserDefaultsの保存情報にも変更を反映
-            userDefaults.removeObject(forKey: "topRightSectionItemName")
-            userDefaults.set(topRightSectionItemNameArray, forKey: "topRightSectionItemName")
-            
-            //tableviewの操作
-            self.topRightSectionTableView.beginUpdates()
-            self.topRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
-            self.topRightSectionTableView.endUpdates()
-        }
-        else if( (tableview?.isEqual(bottomLeftSectionTableView))! ){
-            let indexPath = self.bottomLeftSectionTableView.indexPath(for: cell!)
-            
-            //1次データの削除
-            self.bottomLeftSectionItemNameArray.remove(at: indexPath!.row)
-            
-            //2次データ再生成
-            //numberOfRowsInSectionではここを見てるから
-            //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
-            generateItemNameDataArrays()
-            
-            //UserDefaultsの保存情報にも変更を反映
-            userDefaults.removeObject(forKey: "bottomLeftSectionItemName")
-            userDefaults.set(bottomLeftSectionItemNameArray, forKey: "bottomLeftSectionItemName")
-            
-            //tableviewの操作
-            self.bottomLeftSectionTableView.beginUpdates()
-            self.bottomLeftSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
-            self.bottomLeftSectionTableView.endUpdates()
-        }
-        else if( (tableview?.isEqual(bottomRightSectionTableView))! ){
-            let indexPath = self.bottomRightSectionTableView.indexPath(for: cell!)
-            
-            //1次データの削除
-            self.bottomRightSectionItemNameArray.remove(at: indexPath!.row)
-            
-            //2次データ再生成
-            //numberOfRowsInSectionではここを見てるから
-            //作り直さないとdeleteRowsでnumberOfRowsInSection呼ぶ時に数が変わってなくて死ぬ
-            generateItemNameDataArrays()
-            
-            //UserDefaultsの保存情報にも変更を反映
-            userDefaults.removeObject(forKey: "bottomRightSectionItemName")
-            userDefaults.set(bottomRightSectionItemNameArray, forKey: "bottomRightSectionItemName")
-            
-            //tableviewの操作
-            self.bottomRightSectionTableView.beginUpdates()
-            self.bottomRightSectionTableView.deleteRows(at: [indexPath!], with: UITableView.RowAnimation.fade)
-            self.bottomRightSectionTableView.endUpdates()
-        }
+        presenter.onSelectRadioButton(sectionTag: checkTableView(tableview), itemIndex: selectedRowIndex)
     }
 }
-

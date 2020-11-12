@@ -113,7 +113,6 @@ class AddModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-//            self.delegate?.afterPushModalViewAddButton(sectionTag: sectionTag, content: content)
             presenter.addItem(sectionIndex: sectionTag, content: content)
           
             resetTextFieldState()
