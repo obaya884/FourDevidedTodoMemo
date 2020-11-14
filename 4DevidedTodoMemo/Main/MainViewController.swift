@@ -153,7 +153,7 @@ extension MainViewController: MainPresenterOutput {
     }
     
     func popUpAddDialog() {
-        let addModal = AddModalViewController(nibName: "ModalViewController", bundle: nil)
+        let addModal = AddModalViewController(nibName: "ModalView", bundle: nil)
         let model = ItemModel()
         let addModalPresenter = AddModalPresenter(view: addModal, model: model)
         addModal.inject(presenter: addModalPresenter)
