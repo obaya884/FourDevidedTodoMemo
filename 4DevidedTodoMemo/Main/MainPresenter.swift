@@ -29,6 +29,7 @@ protocol MainPresenterInput {
 protocol MainPresenterOutput: AnyObject {
     func updateItems()
     func popUpAddDialog()
+    func popUpEditDialog()
 }
 
 final class MainPresenter: MainPresenterInput {
@@ -120,7 +121,7 @@ final class MainPresenter: MainPresenterInput {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        // TODO:  編集機能の実装
+        view.popUpEditDialog()
     }
     
     

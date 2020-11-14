@@ -15,13 +15,30 @@ class EditModalViewController: UIViewController {
         self.presenter = presenter
     }
     
+    weak var modalView: UIView!
     var sectionPickerView: UIPickerView = UIPickerView()
     
     @IBOutlet var sectionTextField: UITextField!
     @IBOutlet var contentTextField: UITextField!
+    @IBOutlet weak var completeButton: UIButton!
+
+    override func loadView() {
+        super.loadView()
+        
+        modalView = UINib(nibName: "ModalView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as? UIView
+        view.addSubview(modalView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        modalView.frame = self.view.frame
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        completeButton.setTitle("完了", for: .normal)
+        completeButton.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         
         contentTextField.delegate = self
         sectionTextField.delegate = self
@@ -56,7 +73,7 @@ class EditModalViewController: UIViewController {
         self.sectionTextField.endEditing(true)
     }
 
-    @IBAction func pushAddButton(){
+    @objc func tapButton(){
         if (sectionTextField.text == "" && contentTextField.text == ""){
             sectionTextField.layer.borderColor = UIColor.red.cgColor
             contentTextField.layer.borderColor = UIColor.red.cgColor

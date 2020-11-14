@@ -37,7 +37,12 @@ class MainViewController: UIViewController{
         topRightSectionTableView.dataSource = self
         bottomLeftSectionTableView.dataSource = self
         bottomRightSectionTableView.dataSource = self
-                
+
+        topLeftSectionTableView.delegate = self
+        topRightSectionTableView.delegate = self
+        bottomLeftSectionTableView.delegate = self
+        bottomRightSectionTableView.delegate = self
+
         //TableViewのカスタムセル登録
         self.topLeftSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         self.topRightSectionTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
@@ -59,15 +64,6 @@ class MainViewController: UIViewController{
         self.topRightSectionNameTextField.text = presenter.topRightSectionName
         self.bottomLeftSectionNameTextField.text = presenter.bottomLeftSectionName
         self.bottomRightSectionNameTextField.text = presenter.bottomRightSectionName
-    
-        // TODO: ウォークスルーの実現検討
-        //初期値の設定（チュートリアル説明用）
-        //        userDefaults.register(defaults:
-        //            ["topLeftSectionItemName": ["Tetraへようこそ！", "中央のプラスボタンから", "TODOを追加できます"],
-        //             "topRightSectionItemName": ["←のボックスをタップすると", "TODOを消すことができます"],
-        //             "bottomLeftSectionItemName": ["TetraではTODOを", "4つの領域に分類します"],
-        //             "bottomRightSectionItemName": ["領域の名前をタップすると", "領域名を変更できます", "それではTetraをお楽しみください！"]
-        //            ])
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -144,7 +140,14 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRow(at: indexPath)
+    }
+}
+
 extension MainViewController: MainPresenterOutput {
+    
     func updateItems() {
         topLeftSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
         topRightSectionTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -178,6 +181,34 @@ extension MainViewController: MainPresenterOutput {
             present(popup, animated: true, completion: nil)
         }
     }
+    
+    func popUpEditDialog() {
+        let editModal = EditModalViewController()
+        let model = ItemModel()
+        let editModalPresenter = EditModalPresenter(view: editModal, model: model)
+        editModal.inject(presenter: editModalPresenter)
+        
+        //モーダル外のオーバーレイ表示の設定
+        let overlayAppearance = PopupDialogOverlayView.appearance()
+        overlayAppearance.color           = .white
+        overlayAppearance.blurRadius      = 5
+        overlayAppearance.blurEnabled     = true
+        overlayAppearance.liveBlurEnabled = false
+        overlayAppearance.opacity         = 0.2
+        
+        // 表示したいビューコントローラーを指定してポップアップを作る
+        let popup = PopupDialog(viewController: editModal, transitionStyle: .zoomIn)
+        
+        // SectionNameが全て存在している状態であれば作成したポップアップを表示する
+        if ( topLeftSectionNameTextField.text != "" &&
+                topRightSectionNameTextField.text != "" &&
+                bottomLeftSectionNameTextField.text != "" &&
+                bottomRightSectionNameTextField.text != "") {
+            self.view.endEditing(true)
+            present(popup, animated: true, completion: nil)
+        }
+    }
+
     
 }
 
