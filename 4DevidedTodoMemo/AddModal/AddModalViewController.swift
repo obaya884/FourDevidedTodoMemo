@@ -15,13 +15,30 @@ class AddModalViewController: UIViewController {
         self.presenter = presenter
     }
     
+    weak var modalView: UIView!
     var sectionPickerView: UIPickerView = UIPickerView()
     
-    @IBOutlet var sectionTextField: UITextField!
-    @IBOutlet var contentTextField: UITextField!
+    @IBOutlet weak var sectionTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var completeButton: UIButton!
+    
+    override func loadView() {
+        super.loadView()
+        
+        modalView = UINib(nibName: "ModalView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as? UIView
+        view.addSubview(modalView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        modalView.frame = self.view.frame
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        completeButton.setTitle("追加", for: .normal)
+        completeButton.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         
         contentTextField.delegate = self
         sectionTextField.delegate = self
@@ -56,7 +73,7 @@ class AddModalViewController: UIViewController {
         self.sectionTextField.endEditing(true)
     }
 
-    @IBAction func pushAddButton(){
+    @objc func tapButton(){
         if (sectionTextField.text == "" && contentTextField.text == ""){
             sectionTextField.layer.borderColor = UIColor.red.cgColor
             contentTextField.layer.borderColor = UIColor.red.cgColor
@@ -93,9 +110,9 @@ extension AddModalViewController: AddModalPresenterOutput {
 extension AddModalViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if(self.sectionTextField.text == ""){
-            self.sectionTextField.text = presenter.sectionName(index: 0)
-        }
+//        if(self.sectionTextField.text == ""){
+//            self.sectionTextField.text = presenter.sectionName(index: 0)
+//        }
         return true
     }
     

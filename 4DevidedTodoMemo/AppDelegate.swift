@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        let appDomain = Bundle.main.bundleIdentifier
-//        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+        let appDomain = Bundle.main.bundleIdentifier
+        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
         
         //セクション名に初期値を設定(ユーザーが変更してない場合はこれが取り出される)
         UserDefaults.standard.register(defaults: ["topLeftSectionName": "生活",
