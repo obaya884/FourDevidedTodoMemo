@@ -1,27 +1,27 @@
 //
-//  ModalViewController.swift
+//  EditModalViewController.swift
 //  4DevidedTodoMemo
 //
-//  Created by 大林拓実 on 2019/05/02.
-//  Copyright © 2019 TakumiObayashi. All rights reserved.
+//  Created by 大林拓実 on 2020/11/14.
+//  Copyright © 2020 TakumiObayashi. All rights reserved.
 //
 
 import UIKit
 
-class AddModalViewController: UIViewController {
+class EditModalViewController: UIViewController {
     
-    private var presenter: AddModalPresenterInput!
-    func inject(presenter: AddModalPresenterInput) {
+    private var presenter: EditModalPresenterInput!
+    func inject(presenter: EditModalPresenterInput) {
         self.presenter = presenter
     }
     
     weak var modalView: UIView!
     var sectionPickerView: UIPickerView = UIPickerView()
     
-    @IBOutlet weak var sectionTextField: UITextField!
-    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet var sectionTextField: UITextField!
+    @IBOutlet var contentTextField: UITextField!
     @IBOutlet weak var completeButton: UIButton!
-    
+
     override func loadView() {
         super.loadView()
         
@@ -37,7 +37,7 @@ class AddModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        completeButton.setTitle("追加", for: .normal)
+        completeButton.setTitle("完了", for: .normal)
         completeButton.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         
         contentTextField.delegate = self
@@ -49,6 +49,9 @@ class AddModalViewController: UIViewController {
         setUpTextField(textField: contentTextField)
         setUpTextField(textField: sectionTextField)
         setUpSectionPickerView()
+        
+        contentTextField.text = presenter.selectedItem()
+        sectionTextField.text = presenter.selectedSectoin()
     }
 
     func setUpTextField(textField: UITextField) {
@@ -94,25 +97,25 @@ class AddModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-            presenter.addItem(sectionIndex: sectionTag, content: content)
-          
+            presenter.editItem(newItemSectionTag: sectionTag, content: content)
+            
             self.dismissDialog()
         }
     }
 }
 
-extension AddModalViewController: AddModalPresenterOutput {
+extension EditModalViewController: EditModalPresenterOutput {
     func dismissDialog() {
         self.dismiss(animated: true, completion: nil)
     }
 }
 
-extension AddModalViewController: UITextFieldDelegate {
+extension EditModalViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        if(self.sectionTextField.text == ""){
-//            self.sectionTextField.text = presenter.sectionName(index: 0)
-//        }
+        if(self.sectionTextField.text == ""){
+            self.sectionTextField.text = presenter.sectionName(index: 0)
+        }
         return true
     }
     
@@ -141,7 +144,7 @@ extension AddModalViewController: UITextFieldDelegate {
 }
 
 // MARK:- PickerView Settings
-extension AddModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension EditModalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
