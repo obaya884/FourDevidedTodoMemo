@@ -97,8 +97,8 @@ class EditModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-//            presenter.addItem(sectionIndex: sectionTag, content: content)
-          
+            presenter.editItem(newItemSectionTag: sectionTag, content: content)
+            
             self.dismissDialog()
         }
     }

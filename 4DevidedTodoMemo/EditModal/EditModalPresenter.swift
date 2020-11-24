@@ -14,7 +14,7 @@ protocol EditModalPresenterInput {
     func selectedItem() -> String
     func selectedSectoin() -> String
     func sectionName(index: Int) -> String?
-    func editItem(sectionIndex: Int, content: String)
+    func editItem(newItemSectionTag: Int, content: String)
 }
 
 protocol EditModalPresenterOutput: AnyObject {
@@ -31,24 +31,24 @@ final class EditModalPresenter: EditModalPresenterInput {
     
     private weak var view: EditModalPresenterOutput!
     private var model: ItemModelInput
-    private var index: Int = 0
-    private var sectionTag: Int = 0
+    private var preItemIndex: Int = 0
+    private var preItemSectionTag: Int = 0
     
     init(view: EditModalPresenterOutput, model: ItemModelInput, at index: Int, sectionTag: Int) {
         self.view = view
         self.model = model
-        self.index = index
-        self.sectionTag = sectionTag
+        self.preItemIndex = index
+        self.preItemSectionTag = sectionTag
         
         sectionNames = model.fetchSectionNames()
     }
     
     func selectedItem() -> String {
-        return model.item(index: index, tag: sectionTag)
+        return model.item(index: preItemIndex, tag: preItemSectionTag)
     }
     
     func selectedSectoin() -> String {
-        return model.fetchSectionName(tag: sectionTag)
+        return model.fetchSectionName(tag: preItemSectionTag)
     }
     
     func sectionName(index: Int) -> String? {
@@ -56,8 +56,8 @@ final class EditModalPresenter: EditModalPresenterInput {
         return sectionNames[index]
     }
 
-    func editItem(sectionIndex: Int, content: String) {
-//        model.addItem(tag: sectionIndex, content: content, completion: model.notify)
+    func editItem(newItemSectionTag: Int, content: String) {
+        model.editItem(preSectionTag: preItemSectionTag, newSectionTag: newItemSectionTag, preItemIndex: preItemIndex, content: content, completion: model.notify)
     }
 
 }
