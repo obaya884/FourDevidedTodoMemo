@@ -20,7 +20,7 @@ protocol MainPresenterInput {
     var bottomRightSectionName: String{get}
     
     func item(forRow row: Int, tag: Int) -> String?
-    func didSelectRow(at indexPath: IndexPath)
+    func didSelectRow(at indexPath: IndexPath, tag: Int)
     func onSelectRadioButton(sectionTag: Int, itemIndex: Int)
     func transitionToAddModal()
     func receiveNotify()
@@ -29,7 +29,7 @@ protocol MainPresenterInput {
 protocol MainPresenterOutput: AnyObject {
     func updateItems()
     func popUpAddDialog()
-    func popUpEditDialog()
+    func popUpEditDialog(at index: Int, tag: Int)
 }
 
 final class MainPresenter: MainPresenterInput {
@@ -120,8 +120,8 @@ final class MainPresenter: MainPresenterInput {
         model.deleteItem(tag: sectionTag, index: itemIndex, completion: model.notify)
     }
     
-    func didSelectRow(at indexPath: IndexPath) {
-        view.popUpEditDialog()
+    func didSelectRow(at indexPath: IndexPath, tag: Int) {
+        view.popUpEditDialog(at: indexPath.row, tag: tag)
     }
     
     

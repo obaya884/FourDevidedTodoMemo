@@ -49,6 +49,9 @@ class EditModalViewController: UIViewController {
         setUpTextField(textField: contentTextField)
         setUpTextField(textField: sectionTextField)
         setUpSectionPickerView()
+        
+        contentTextField.text = presenter.selectedItem()
+        sectionTextField.text = presenter.selectedSectoin()
     }
 
     func setUpTextField(textField: UITextField) {
@@ -94,7 +97,7 @@ class EditModalViewController: UIViewController {
                 }
             }
             let content: String = self.contentTextField.text!
-            presenter.addItem(sectionIndex: sectionTag, content: content)
+//            presenter.addItem(sectionIndex: sectionTag, content: content)
           
             self.dismissDialog()
         }

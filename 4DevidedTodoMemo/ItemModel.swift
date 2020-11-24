@@ -12,6 +12,7 @@ protocol ItemModelInput {
     func fetchSectionName(tag: Int) -> String
     func fetchSectionNames() -> [String]
     func fetchItems(tag: Int) -> [String]
+    func item(index: Int, tag: Int) -> String
     func addItem(tag: Int, content: String, completion: @escaping () -> Void)
     func editItem(tag: Int, index: Int, content: String)
     func deleteItem(tag: Int, index: Int, completion: @escaping () -> Void)
@@ -79,6 +80,25 @@ final class ItemModel: ItemModelInput {
             return []
         }
     }
+    
+    func item(index: Int, tag: Int) -> String {
+        var items: [String] = []
+        
+        switch tag {
+        case 0:
+            items = userDefaults.array(forKey: "topLeftSectionItemName") as? [String] ?? []
+        case 1:
+            items = userDefaults.array(forKey: "topRightSectionItemName") as? [String] ?? []
+        case 2:
+            items = userDefaults.array(forKey: "bottomLeftSectionItemName") as? [String] ?? []
+        case 3:
+            items = userDefaults.array(forKey: "bottomRightSectionItemName") as? [String] ?? []
+        default:
+            break
+        }
+        return items[index]
+    }
+
     
     func addItem(tag: Int, content: String, completion: @escaping () -> Void) {
         var keyName = ""

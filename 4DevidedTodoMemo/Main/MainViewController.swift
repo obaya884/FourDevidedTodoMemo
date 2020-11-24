@@ -142,7 +142,7 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelectRow(at: indexPath)
+        presenter.didSelectRow(at: indexPath, tag: checkTableView(tableView))
     }
 }
 
@@ -182,10 +182,10 @@ extension MainViewController: MainPresenterOutput {
         }
     }
     
-    func popUpEditDialog() {
+    func popUpEditDialog(at index: Int, tag: Int) {
         let editModal = EditModalViewController()
         let model = ItemModel()
-        let editModalPresenter = EditModalPresenter(view: editModal, model: model)
+        let editModalPresenter = EditModalPresenter(view: editModal, model: model, at: index, sectionTag: tag)
         editModal.inject(presenter: editModalPresenter)
         
         //モーダル外のオーバーレイ表示の設定
